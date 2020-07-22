@@ -1,0 +1,43 @@
+<style>
+        .cart-reduce, .cart-add {
+            display: inline-block;
+            font-size: 16px;
+            color: #0091FF;
+            white-space: nowrap;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            border: 1px solid #0091FF;
+            padding: 0;
+            z-index: 10;
+            line-height: 22px;
+        }
+
+        .cart-count {
+            max-width: 30px;
+            border: none;
+            border-bottom: 1px solid #0091FF;
+            text-align: center;
+            -moz-appearance: textfield;
+        }
+
+        .cart-count::-webkit-outer-spin-button, .cart-count::-webkit-inner-spin-button {
+            -webkit-appearance: none !important;
+            margin: 0;
+        }
+
+        .cart-count:focus {
+            outline: none;
+        }
+
+        .listview-detail {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+
+    </style>

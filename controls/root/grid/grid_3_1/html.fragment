@@ -1,0 +1,34 @@
+<div class="um-grid">
+    <div class="um-grid-row tc">
+        <div class="um-box-center">
+            <a href="#" class="um-circle w70 h70 um-box-center um-bgc-blue">
+                <div>
+                    <img src="img/poster.png" width=30 class="um-img-responsive" alt="">
+                    <div class="um-white f12">
+                        我要申报
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="um-box-center">
+            <a href="#" class="um-circle w70 h70 um-box-center um-bgc-red">
+                <div>
+                    <img src="img/aftercall.png" width=30 class="um-img-responsive" alt="">
+                    <div class="um-white f12">
+                        申报查询
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="um-box-center">
+            <a href="#" class="um-circle w70 h70 um-box-center um-bgc-orange">
+                <div>
+                    <img src="img/contacts.png" width=30 class="um-img-responsive" alt="">
+                    <div class="um-white f12">
+                        通讯录
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

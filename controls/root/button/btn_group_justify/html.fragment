@@ -1,0 +1,11 @@
+<div class="btn-group btn-group-justify">
+	<button type="button" class="btn um-btn-info">
+	Left
+	</button>
+	<button type="button" class="btn um-btn-success">
+	Middle
+	</button>
+	<button type="button" class="btn um-btn-primary">
+	Right
+	</button>
+</div>

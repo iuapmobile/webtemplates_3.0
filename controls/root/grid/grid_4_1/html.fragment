@@ -1,0 +1,54 @@
+<div class="um-grid um-row">
+	<div class="um-grid-row tc">
+		<div>
+			<a href="#">
+				<img src="img/ldh.png" class="w um-img-responsive um-circle" alt="">
+				<span>刘德华</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/ljr.png" class="w um-img-responsive um-circle" alt="">
+				<span>梁静茹</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/portal.jpg" class="w um-img-responsive um-circle" alt="">
+				<span>辣椒哥</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/dzq.png" class="w um-img-responsive um-circle" alt="">
+				<span>邓紫棋</span>
+			</a>
+		</div>
+	</div>
+	<div class="um-grid-row tc">
+		<div>
+			<a href="#">
+				<img src="img/ldh.png" class="w um-img-responsive um-circle" alt="">
+				<span>刘德华</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/ljr.png" class="w um-img-responsive um-circle" alt="">
+				<span>梁静茹</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/portal.jpg" class="w um-img-responsive um-circle" alt="">
+				<span>辣椒哥</span>
+			</a>
+		</div>
+		<div>
+			<a href="#">
+				<img src="img/dzq.png" class="w um-img-responsive um-circle" alt="">
+				<span>邓紫棋</span>
+			</a>
+		</div>
+	</div>
+</div>

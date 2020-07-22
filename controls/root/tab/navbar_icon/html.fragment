@@ -1,0 +1,6 @@
+<ul class="um-tabbar m10">
+    <li><a><div class="f20 ti-palette"></div></a></li>
+    <li class="active"><a><div class="f20 ti-shopping-cart-full"></div></a></li>
+    <li><a><div class="f20 ti-gift"></div></a></li>
+    <li><a><div class="f20 ti-comments-smiley"></div></a></li>
+</ul>

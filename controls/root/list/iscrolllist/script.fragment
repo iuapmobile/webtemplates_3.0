@@ -1,0 +1,4 @@
+<script type="text/javascript" src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js"></script>
+<script type="text/javascript" src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/knockout-2.2.0.js"></script>

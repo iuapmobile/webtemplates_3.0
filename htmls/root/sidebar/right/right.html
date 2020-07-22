@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+			$(function() {
+			});
+			function openRightSidebar() {
+				UM.sidebar.open('#right_sidebar');
+			}
+			function closeAll() {
+				UM.sidebar.close();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="">
+			<div class="um-header">
+				<a href="#" class="um-header-left"><img src="img/dzq.png" class="um-circle" width="30" alt=""></a>
+				<h3>&nbsp;</h3>
+				<div class="um-css3-center w150">
+					<ul class="um-tabbar m10">
+						<li>
+							<a>消息</a>
+						</li>
+						<li class="active">
+							<a>电话</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" onclick="openRightSidebar()" class="um-header-right ti-menu mr5" data-placement="bottom-left"></a>
+			</div>
+			<div class="um-content">
+				<div class="um-input-search">
+					<input type="search" class="form-control" placeholder="搜索">
+					<span class="um-input-cancle">取消</span>
+				</div>
+			</div>
+		</div>
+		<div class="um-sidebar um-sidebar-right" id="right_sidebar">
+			<div class="um-content">
+				<ul class="um-list">
+					<li class="um-list-item">
+						<div class="um-list-item-inner">
+							<div class="um-list-item-left">
+								登录状态
+							</div>
+							<div class="um-list-item-right">
+								<label class="um-switch1">
+									<input type="checkbox" value="on" checked="checked">
+									<div class="um-track">
+										<div class="um-handle"></div>
+									</div> </label>
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left">
+									设置时长
+								</div>
+								<div class="um-list-item-right">
+									<input type="range" />
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left">
+									进度
+								</div>
+								<div class="um-list-item-right">
+									<div class="um-progress">
+										<div class="um-progress-bar um-progress-bar-success" style="width: 80%">
+											80% Complete (success)
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="um-list-item">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-left">
+									性别
+								</div>
+								<div class="um-list-item-right">
+									<select class="form-control" name="" id="">
+										<option value="">男</option>
+										<option value="">女</option>
+									</select>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="um-btn" onclick="closeAll()">
+						关闭
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>

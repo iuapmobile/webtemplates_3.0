@@ -1,0 +1,26 @@
+<div class="um-list">
+	<a  href="#" class="um-list-item">
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				<h3 class="um-media-heading um-blue">中建六局年终采购</h3>
+				<p class="um-red">成功率60%</p>
+			</div>
+			<div class="um-list-item-right f14 um-gray">
+				<p class="mr15">类型</p>
+				<p class="mr15">成功</p>
+			</div>
+		</div>
+	</a>
+	<a  href="#" class="um-list-item">
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				<h3 class="um-media-heading um-blue">用友集团年终采购</h3>
+				<p class="um-red">成功率80%</p>
+			</div>
+			<div class="um-list-item-right f14 um-gray">
+				<p class="mr15">类型</p>
+				<p class="mr15">成功</p>
+			</div>
+		</div>
+	</a>
+</div>

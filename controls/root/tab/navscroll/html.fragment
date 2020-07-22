@@ -1,0 +1,5 @@
+<div class="um-nav">
+	<div class="um-nav-inner" data-bind="foreach:arrData">
+		<a href="#" class="um-nav-item" data-bind="text: title, attr:{href:src}"></a>
+	</div>
+</div>

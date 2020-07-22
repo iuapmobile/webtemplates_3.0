@@ -1,0 +1,8 @@
+<div class="overlay"></div>
+<div id="" class="um-poppicker active">
+	<div class="btn">取消</div>
+	<div class="um-poppicker-content">
+		为了用户初次测试和学习移动平台的相关功能，特设计了最简单的HelloWorld应用模板。
+		此应用需预置到移动开发平台studio中，用户打开界面已存在，编译后即可运行。
+	</div>
+</div>

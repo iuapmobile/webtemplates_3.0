@@ -1,0 +1,26 @@
+<div class="um-listview-wrap" id="listview">
+	<ul class="um-list um-no-active" data-bind="foreach: data">
+		<li class="um-listview-row">
+			<a href="#" class="um-list-item um-swipe-action um-no-icon">
+				<div class="um-swipe-btns">
+					<span class="um-swipe-btn to-store ti-star" data-bind="click:$parent.rowCollect"></span>
+					<span class="um-swipe-btn um-delete ti-trash"></span>
+				</div>
+				<div class="um-list-item-media msg-info">
+					<img alt="" data-bind="attr:{'src': img}" width=50>
+					<span class="um-badge" data-bind="text:msgNum,visible:msgNum>0"></span>
+				</div>
+				<div class="um-list-item-inner">
+					<div class="um-list-item-body">
+						<p class="um-media-heading um-gray fb f16 um-text-overflow">来源于：<span data-bind="text:sender"></span></p>
+						<p class="f16 fb um-text-overflow">标题：<span data-bind="text:title"></span></p>
+						<p class="um-gray f14 um-text-overflow">内容：<span data-bind="text:lastMsg"></span></p>
+					</div>
+					<div class="pr5">
+						<span class="um-gray f12" data-bind="text:lastTime"></span>
+					</div>
+				</div> 
+			</a>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,12 @@
+<div id="slider" class="swipe">
+	<div class="swipe-wrap" data-bind="foreach:data">
+		<div>
+			<img data-bind="attr:{'src':img}">
+			<div class="swipe-words pl10 pr10">
+				<h2 data-bind="text:title" class="f16"></h2>
+				<p class="f14 mb5">发布时间：<span data-bind="text:pubdate"></span><span class="ml15 mr5 ti-eye um-blue"></span><span data-bind="text:hits"></span></p>
+				<p data-bind="text: brief" class="f14"></p>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="um-footer">
+    <div class="um-footerbar pt5">
+        <a href="#" class="um-footerbar-item active">
+            <i class="ti-angle-left f20"></i>
+        </a>
+        <a href="#" class="um-footerbar-item active">
+            <i class="ti-angle-right f20"></i>
+        </a>
+        <a href="#" class="um-footerbar-item active">
+            <i class="ti-export f20"></i>
+        </a>
+        <a href="#" class="um-footerbar-item active">
+            <i class="ti-book f20"></i>
+        </a>
+        <a href="#" class="um-footerbar-item active">
+            <i class="ti-layers f20"></i>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="um-check-group um-check-group-left">
+    <label class="um-check-group-item">
+        <input name="um-checkbox" type="checkbox" checked value="">
+        <span class="um-icon-checkbox um-css3-vc"></span>
+        <span class="um-black">复选框1</span> 
+    </label>
+    <label class="um-check-group-item">
+        <input name="um-checkbox" type="checkbox" value="">
+        <span class="um-icon-checkbox um-css3-vc"></span>
+        <span class="um-black">复选框2</span> 
+    </label>
+
+    <label class="um-check-group-item">
+        <input name="um-checkbox" type="checkbox" value="">
+        <span class="um-icon-checkbox um-css3-vc"></span>
+        <span class="um-black">复选框3</span> 
+    </label>
+</div>

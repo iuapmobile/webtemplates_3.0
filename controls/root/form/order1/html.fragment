@@ -1,0 +1,76 @@
+<ul class="um-list">
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+                <div class="um-list-item-left">
+                    公司名称：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control" placeholder="请输入公司名称">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-left">
+                    订单编号：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control" placeholder="请输入订单编号">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-left">
+                    订单金额：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control" placeholder="请输入订单金额">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-left">
+                    下单日期：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="date" name="date" value="2015-01-01" class="form-control">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+                <div class="um-list-item-left">
+                    业务员：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control" placeholder="请输入业务员名字">
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-left">
+                    联系电话：
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control" placeholder="请输入业务员联系电话">
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

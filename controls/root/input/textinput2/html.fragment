@@ -1,0 +1,4 @@
+<div class="pr">
+	<input type="text" class="form-control" placeholder="该输入框文本可以清除">
+	<span class="um-input-clear ti-close"></span>
+</div>

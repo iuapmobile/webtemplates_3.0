@@ -1,0 +1,6 @@
+<label class="um-label um-box-justify">
+	<div>申报金额</div>
+	<div>
+		<input type="number" class="form-control" placeholder="请输入金额">
+	</div>
+</label>

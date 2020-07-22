@@ -1,0 +1,13 @@
+ <!-- 该画廊最好在um-content上加上um-content-fill样式类 -->
+ <ul class="um-tabbar um-tabbar-underline" id="nav">
+	<li class="active">
+		<a href="javascript:;">用户</a>
+	</li>
+	<li>
+		<a href="javascript:;">应用</a>
+	</li>
+	<li>
+		<a href="javascript:;">社区</a>
+	</li>
+</ul>
+<div id="iSlider-wrapper" class="iSlider-wrapper"></div>

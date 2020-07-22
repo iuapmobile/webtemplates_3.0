@@ -1,0 +1,5 @@
+<label class="um-check-inline">
+    <input name="um-checkbox-inline" type="checkbox" value="自动登录" checked>
+    <span class="um-icon-checkbox um-css3-vc"></span>
+    <span class="um-black ml5">自动登录</span> 
+</label>

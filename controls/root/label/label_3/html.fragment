@@ -1,0 +1,6 @@
+<label class="um-label um-box-justify">
+	<div>用户名</div>
+	<div>
+		<input type="text" class="form-control" placeholder="手机号/邮箱">
+	</div>
+</label>

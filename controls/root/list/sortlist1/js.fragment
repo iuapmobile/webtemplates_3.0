@@ -1,0 +1,54 @@
+    <script>
+        $(function () {
+		    		
+			//Knockout绑定
+            var ViewModel = function () {
+                       
+                
+            };
+
+			var jsonArray = [{
+                    "gname": "A", "row": [
+                        {
+                            "name": "爱丽丝",
+                            "img": "img/contact1.jpg",
+                            "tel": "1375101***1",
+                            "email": "xyz1@yonyou.com"
+                        },
+                        {
+                            "name": "安徒生",
+                            "img": "img/contact2.jpg",
+                            "tel": "1375101***2",
+                            "email": "xyz2@yonyou.com"
+                        }]
+                }, {
+                    "gname": "B", "row": [
+                        {
+                            "name": "拜伦",           
+                            "img": "img/contact3.jpg",
+                            "tel": "1375101***3",
+                            "email": "xyz3@yonyou.com"
+                        },
+                        {
+                            "name": "包拯",             
+                            "img": "img/contact4.jpg",
+                            "tel": "1375101***4",
+                            "email": "xyz4@yonyou.com"
+                        }]
+                }];
+            var viewModel = new ViewModel();
+			viewModel.contacts = ko.observableArray(jsonArray);
+            ko.applyBindings(viewModel);
+
+			//构造控件实例
+		    var sortList = UM.sortList("#sortList");
+			
+            //添加控件方法
+            sortList.on("itemClick",function(sender,args){
+			    //这里可以处理行点击事件，参数sender即为当前列表实例对象，args对象有4个属性，即groupIndex(当前行所在分组的索引),childIndex(当前行在所在分组内的索引),rowIndex(当前行在整个列表中的行索引),$target(目标行的jquery对象)
+                //alert("您点击了分组列表第" + (args.groupIndex+1) + "分组的第" + (args.childIndex+1) + "行！");
+            });
+			//设置右侧导航
+            sortList.setNaviItems(["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]);
+        });
+    </script>

@@ -1,0 +1,11 @@
+<div class="btn-group btn-group-vertical">
+	<button type="button" class="btn um-btn-success">
+	Left
+	</button>
+	<button type="button" class="btn  um-btn-primary">
+	Middle
+	</button>
+	<button type="button" class="btn um-btn-info">
+	Right
+	</button>
+</div>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <device>
+        <type>iphone</type>
+        <certification>${certification}</certification>
+        <sdk>
+            <targetVersion>4.3</targetVersion>
+        </sdk>
+        <template>${template_name}</template>
+        <iphoneIcon>
+            <icon>/app.png</icon>
+            <iconRetina>/app.png</iconRetina>
+            <launch></launch>
+            <launchRetina></launchRetina>
+        </iphoneIcon>
+        <ipadIcon/>
+        <bundleId>com.ufida.uap.dsl</bundleId>
+        <subTitle></subTitle>
+        <weixin>${weixin}</weixin>
+    </device>
+    <buildEnv>        
+        <property name="CFBundleIdentifier">${bundle_id}</property>
+    </buildEnv>
+    <build>
+        <preInit></preInit>
+        <preCompile></preCompile>
+        <prePackage></prePackage>
+        <preRelease></preRelease>
+    </build>
+    <parameters/>
+    <plugins/>
+</settings>

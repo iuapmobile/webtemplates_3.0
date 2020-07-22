@@ -1,0 +1,7 @@
+<div class="um-footerbar">
+    <a class="um-footerbar-item">收藏</a>
+    <a class="um-footerbar-item active">编辑</a>
+    <a class="um-footerbar-item">转发</a>
+    <a class="um-footerbar-item">记录</a>
+    <a class="um-footerbar-item">删除</a>
+</div>

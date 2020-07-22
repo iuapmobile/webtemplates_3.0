@@ -1,0 +1,13 @@
+<div class="um-list">
+	<div class="um-process" data-bind="foreach: data">
+		<a href="#" class="um-list-item">
+			<div class="um-list-item-inner">
+				<div class="um-list-item-body">
+					<p class="f14">审批人：<span data-bind="text:approver" class="fb"></span><span data-bind="text: status" class="ml10 um-green"></span></p>
+					<p class="f14 mt5">意&nbsp;&nbsp;&nbsp;&nbsp;见：<span data-bind="text:opinion" class="um-blue"></span></p>
+					<p class="um-gray um-text-overflow2 f12 mt5" data-bind="text: time"></p>
+				</div>
+			</div> 
+		</a>
+	</div>
+</div>

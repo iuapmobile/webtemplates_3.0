@@ -1,0 +1,45 @@
+<script>
+	       $(function() {
+				/* 本UM.map插件基于高德地图js API v1.3插件编写,使用前记得前往高德地图开发平台申请相关的key;
+				 * 此外UM.map并没有过多的封装功能，只是添加了一些功能选项以及标注接口，更多功能可通过该实例的getAMap方法访问高德地图实例具备的更多功能；
+				 * 值得注意的是，自动定位当前位置，须开发者根据自己的环境，调用相应的获取当前位置的API来实现，下面代码会给出示例
+				 */
+				var map = UM.map("#amap", {
+					enableToolBar : true, //是否添加缩放控件
+					enableScale : true, //是否添加比例尺控件
+					enableMapType : true, //是否添加路况控件
+					amapOptions : {//高德地图配置项，详细可配置项请参考高德地图JS API
+						center : [116.39, 39.9],
+						zoom : 14 // 缩放级别
+					}
+				});
+
+				/*获取高德地图实例，然后可以调用高德地图的更全的功能，请参考http://lbs.amap.com/api/javascript-api/summary-3/ */
+				var amap = map.getAMap();
+				
+				//获取所有的点标注
+				//var marks = map.getAllMarkers();
+				
+				//添加单个点标注和删除单个点标注
+				/*marker = map.createMarker({
+					icon : "http://webapi.amap.com/images/marker_sprite.png",
+					position : [116.405467, 39.907761],
+					title : "这是一个新标注"
+				}, true);
+
+				map.clearMarker(marker);*/
+				
+				//创建多个点标注及移除所有点标注
+				/*map.createMarkers([{
+						icon : 'http://www.easyicon.net/api/resizeApi.php?id=1181387&size=24', //标注ICON
+						position : [116.205467, 39.907761]  //标注位置经纬度数组
+					}, {
+						icon : 'http://www.easyicon.net/api/resizeApi.php?id=1181387&size=24',
+						position : [116.368904, 39.913423]
+					}, {
+						icon : 'http://www.easyicon.net/api/resizeApi.php?id=1181387&size=24',
+						position : [116.305467, 39.807761]
+					}], true);
+			   map.clearAllMarkers();*/				
+			});
+</script>

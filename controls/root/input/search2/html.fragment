@@ -1,0 +1,4 @@
+<div class="um-input-search">
+	<input type="search" class="form-control" placeholder="search">
+	<span class="um-input-cancle">取消</span>
+</div>

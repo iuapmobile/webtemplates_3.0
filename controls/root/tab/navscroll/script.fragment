@@ -1,0 +1,11 @@
+<script src="js/knockout-2.2.0.js" type="text/javascript" charset="utf-8"></script>	
+<script>
+$(function(){
+  var arrData = [{title:"军事",src: "#item1" },{title: "社会",src: "#item2" },{title: "体育",src: "#item3" },{title: "娱乐",src: "#item4" },{title: "财经",src: "#item5" },{title: "科技",src: "#item6" },{title: "专题",src: "#item7" },{title: "图片",src: "#item8" },{title: "视频",src: "#item9" },{title: "国内",src: "#item10" },{title: "国际",src: "#item11" },{title: "视界",src: "#item12"}];
+
+ function Model(){
+    this.arrData = ko.observableArray(arrData);
+  }
+  ko.applyBindings(new Model());
+})
+</script>

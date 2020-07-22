@@ -1,0 +1,34 @@
+<div class="um-list">
+	<a href="#"  class="um-list-item">
+		<div class="um-list-item-media">
+			<img src="img/iphone6.jpg" alt="...">
+		</div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				<h4 class="um-media-heading">Apple/苹果 iPhone 6 Plus 5.5 港版 澳门电信三网 代购 原封 S版</h4>
+				<p class="um-red f14">￥5106.0</p>
+				<div class="um-gray um-box-justify f12">
+					<span>免运费</span>
+					<span>2000人付款</span>
+					<span>北京</span>
+				</div>
+			</div>
+		</div>
+	</a>
+	<a href="#"  class="um-list-item">
+		<div class="um-list-item-media">
+			<img src="img/iphone6.jpg" alt="...">
+		</div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				<h4 class="um-media-heading">Apple/苹果 iPhone 6 Plus 5.5 港版 澳门电信三网 代购 原封 S版</h4>
+				<p class="um-red f14">￥5106.0</p>
+				<div class="um-gray um-box-justify f12">
+					<span>免运费</span>
+					<span>500人付款</span>
+					<span>天津</span>
+				</div>
+			</div>
+		</div>
+	</a>
+</div>

@@ -1,0 +1,8 @@
+<style>
+   .downloadBtn {
+      padding:5px;
+	  border:1px solid #28C0C6;
+	  border-radius:4px;
+	  font-size:14px;color:#28C0C6;
+   }
+</style>

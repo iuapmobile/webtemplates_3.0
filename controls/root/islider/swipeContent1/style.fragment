@@ -1,0 +1,7 @@
+ <style>
+	    .swipe-words {
+	    	  background-image:url("img/inforbg.jpg");
+	    	  background-color: rgba(0,0,0,0);
+	    	  color: #efeff4;
+	    }
+</style>

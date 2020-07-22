@@ -1,0 +1,27 @@
+
+				<div class="um-listview-wrap" id="listview">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row">
+							<a href="#" class="um-list-item um-swipe-action um-no-icon">
+							<div class="um-swipe-btns">
+								<span class="um-swipe-btn um-delete ti-trash"></span>
+							</div>
+							<div class="um-list-item-media">
+								<img alt="" height=74 data-bind="attr:{src: img}">
+							</div>
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body" style="padding-right:5px;">
+									<div data-bind="text:title" class="fb f16 um-text-overflow"></div>
+									<div>
+										<span data-bind="text:detail" class="f14 um-gray listview-detail" style="height:40px;"></span>
+									</div>
+
+									<div class="f12 tr um-blue">
+										<span data-bind="text:comments"></span><span class="ml5">跟帖</span>
+									</div>
+								</div>
+
+							</div> </a>
+						</li>
+					</ul>
+				</div>

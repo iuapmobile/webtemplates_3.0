@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">	
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>	
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+
+			$(function() {
+
+			});
+			function cancle(){
+				UM.actionsheet.close();
+			}
+		</script>
+
+	</head>
+	<body>
+		<div class="um-page" id="">
+			<div class="um-header" >
+				<h3>浮动层</h3>
+			</div>
+			<div class="um-content mt30">
+				<a href="#" class="popBtn btn mt30" data-target="actionsheet">actionsheet</a>
+			</div>
+		</div>
+		<div class="um-actionsheet" id="actionsheet">
+				<ul class="um-list um-list-corner">
+					<li>
+						<p class="btn popup-title">
+							Here comes some optional description or warning for actions below
+						</p>
+					</li>
+					<li>
+						<div class="btn">拍照或者录像</div>
+					</li>
+					<li>
+						<div class="btn">选取现有的</div>
+					</li>
+				</ul>
+				<ul class="um-list um-list-corner">
+					<li>
+						<div class="btn" onclick="cancle();">取消</div>
+					</li>
+				</ul>
+			</div>
+	</body>
+</html>

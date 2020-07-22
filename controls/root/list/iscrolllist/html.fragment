@@ -1,0 +1,28 @@
+<div id="wrapper">
+	<div class="uScrollList">
+		<div class="pullDown">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		
+		<ul id="thelist1" data-bind="foreach:users">
+			<li>
+			
+				<img style="width:33px;height:33px;margin-left:10px;margin-top:5px" src="img/app_weibo.jpg"></img>
+			
+				<div style="display:inline-block">
+					<span data-bind="text:name"></span>
+				</div>
+				<div style="display:inline-block">
+					<span data-bind="text:phone"></span>
+				</div>
+			
+			</li>
+			
+		</ul>
+		
+		<div class="pullUp">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">上拉加载更多...</span>
+		</div>
+		
+	</div>
+</div>

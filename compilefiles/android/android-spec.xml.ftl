@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<settings>
+    <device>
+        <type>android</type>
+        <certification>ump2</certification>
+        <sdk>
+            <minSdkVersion>8</minSdkVersion>
+            <targetSdkVersion>10</targetSdkVersion>
+            <maxSdkVersion>17</maxSdkVersion>
+        </sdk>
+        <template>${template_name}</template>
+        <launcherIcon>
+            <ldpi></ldpi>
+            <mdpi></mdpi>
+            <hdpi></hdpi>
+            <xhdpi></xhdpi>
+        </launcherIcon>
+        <packageName>${package_name}</packageName>
+    </device>
+    <buildEnv>
+        <property name="package.name">${package_name}</property>
+    </buildEnv>
+    <build>
+        <preInit></preInit>
+        <preCompile></preCompile>
+        <prePackage></prePackage>
+        <preRelease></preRelease>
+    </build>
+    <parameters>
+    </parameters>
+    <plugins/>
+</settings>

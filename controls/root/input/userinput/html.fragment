@@ -1,0 +1,4 @@
+<div class="um-input-group">
+	<span class="btn ti-user"></span>
+	<input type="text" class="form-control" placeholder="手机\\用户名\\邮箱">
+</div>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script src="js/islider.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/islider.css">
+		<style>
+			.content {
+				padding: 10%;
+				height: 100%;
+				width: 100%;
+				-webkit-box-sizing: border-box;
+			}
+			.content h1 {
+				margin: 2em 0;
+			}
+			.content h2 {
+				margin: 2em 0;
+			}
+			.content p {
+				margin: 1em 0;
+			}
+			.page1 {
+				background-color: #F5A8A8;
+				color: #FFF;
+			}
+			.page2 {
+				background-color: #90FFB7;
+			}
+			.page3 {
+				background-color: #90ABFF;
+				color: #FFF;
+			}
+			.page4 {
+				background-color: #FCFF90;
+			}
+			.page5 {
+				background-color: #E390FF;
+				color: #FFF;
+			}
+			.iSlider-wrapper {
+				height: auto;
+			}
+		</style>
+		<script>
+			function $pageReady() {
+				/*这里编写与原生服务相关的代码逻辑，例如对原生设备服务的调用，对网络服务的调用等*/
+				//alert("Mobile Native Ready");
+			}
+
+			$(function() {
+				var list = [{
+					'content' : '<div class="content home"><h1>Home</h1><h2>This is home page</h2><p>home is pretty awsome</p><div><div><input type="text"><input type="checkbox"></div>'
+				}, {
+					'content' : '<div class="content page1"><h1>Page1</h1><h2>This is page1</h2><p>page1 is pretty awsome</p><div>'
+				}, {
+					'content' : '<div class="content page2"><h1>Page2</h1><h2>This is Page2</h2><p>Page2 is pretty awsome</p><div>'
+				}, {
+					'content' : '<div class="content page3"><h1>Page3</h1><h2>This is Page3</h2><p>Page3 is pretty awsome</p><div>'
+				}, {
+					'content' : '<div class="content page4"><h1>Page4</h1><h2>This is Page4</h2><p>Page4 is pretty awsome</p><div>'
+				}, {
+					'content' : '<div class="content page5"><h1>Page5</h1><h2>This is page5</h2><p>page5 is pretty awsome</p><div>'
+				}];
+				var islider = new iSlider({
+					data : list,
+					type : 'dom',
+					dom : document.getElementById("iSlider"),
+					duration : 1000,
+					isLooping : true,
+					isAutoPlay : true,
+					fixPage : true,
+					onslideend : function(idx) {
+						$(".um-footerbar-item").eq(idx).addClass("active").siblings().removeClass("active");
+					}
+				});
+				$(".um-footerbar-item").on("click", function() {
+					$(this).addClass("active").siblings().removeClass("active");
+					var i = $(this).index();
+					islider.slideTo(i);
+				});
+
+				$(islider.wrap).on("click", ".islider-btn-outer", function() {
+					var i = islider.slideIndex;
+					$(".um-footerbar-item").eq(i).addClass("active").siblings().removeClass("active");
+				});
+
+			});
+		</script>
+
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-content um-content-fill um-box">
+				<div id="iSlider" class="iSlider-wrapper um-bf1"></div>
+			</div>
+
+			<div class="um-footer">
+				<div class="um-footerbar">
+					<a href="#" class="um-footerbar-item"> <i class="ti-menu-alt f24"></i>
+					<div class="f12 lh1">
+						企业审核
+					</div> </a>
+					<a href="#" class="um-footerbar-item active"> <i class="ti-bar-chart f24"></i>
+					<div class="f12 lh1">
+						业绩分析
+					</div> </a>
+					<a href="#" class="um-footerbar-item"> <i class="ti-pencil-alt f24"></i>
+					<div class="f12 lh1">
+						新增统计
+					</div> </a>
+					<a href="#" class="um-footerbar-item"> <i class="ti-user f24"></i>
+					<div class="f12 lh1">
+						个人中心
+					</div> </a>
+					<a href="#" class="um-footerbar-item"> <i class="ti-settings f24"></i>
+					<div class="f12 lh1">
+						设置
+					</div> </a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

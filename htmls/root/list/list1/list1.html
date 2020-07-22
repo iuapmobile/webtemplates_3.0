@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<style>
+			#orders {
+				padding-top: 40px;
+			}
+		</style>
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		
+		<script>
+			function $pageReady() {
+				/*这里编写与原生服务相关的代码逻辑，例如对原生设备服务的调用，对网络服务的调用等*/
+				//alert("Mobile Native Ready");
+			}
+
+			$(function() {
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-header" >
+				<a href="index.html" class="um-back"> 返回</a>
+				<h3>标题</h3>
+				<a href="#" class="um-header-right ti-home"></a>
+				<div class="um-input-group">
+					<input type="search" class="form-control" placeholder="这里输入搜索文字" style="border-radius:0">
+					<span class="btn ti-search" style="border-radius:0"></span>
+				</div>
+			</div>
+
+			<div class="um-content" id="orders">
+				<ul class="um-list">
+					<li>
+						<a class="um-list-item">							
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<div class="clearfix f16">
+										<div class="um-xs-6 tl um-text-overflow">
+											<span class="fb">office软件套餐</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow um-red">
+											<span>￥</span>
+											<span>999</span>
+										</div>
+									</div>
+									<div class="clearfix mt5 f12">
+										<div class="um-xs-6 tl um-text-overflow">
+											<spanv class="um-gray">00000003</span>
+											<span>已发货</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow">
+											<span class="um-gray">2015-07-27</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="um-list-item">							
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<div class="clearfix f16">
+										<div class="um-xs-6 tl um-text-overflow">
+											<span class="fb">笔记本电脑</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow um-red">
+											<span>￥</span>
+											<span>5600</span>
+										</div>
+									</div>
+									<div class="clearfix mt5 f12">
+										<div class="um-xs-6 tl um-text-overflow">
+											<spanv class="um-gray">00000002</span>
+											<span>已送达</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow">
+											<span class="um-gray">2015-06-24</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a class="um-list-item">							
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<div class="clearfix f16">
+										<div class="um-xs-6 tl um-text-overflow">
+											<span class="fb">液晶电视</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow um-red">
+											<span>￥</span>
+											<span>3600</span>
+										</div>
+									</div>
+									<div class="clearfix mt5 f12">
+										<div class="um-xs-6 tl um-text-overflow">
+											<spanv class="um-gray">00000001</span>
+											<span>已付款</span>
+										</div>
+										<div class="um-xs-6 tr um-text-overflow">
+											<span class="um-gray">2015-06-23</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</body>
+</html>

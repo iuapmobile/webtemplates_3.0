@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+			$(function() {
+
+			});
+			function openLeftSidebar(){
+				UM.sidebar.open('#left_sidebar', "left");
+			}
+			function closeAll(){
+				UM.sidebar.close();
+			}
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="">
+			<div class="um-header">
+				<a href="#" onclick="openLeftSidebar()" class="um-header-left"><img src="img/dzq.png" class="um-circle" width="30" alt=""></a>
+				<h3>&nbsp;</h3>
+				<div class="um-css3-center w150">
+					<ul class="um-tabbar m10">
+						<li>
+							<a>消息</a>
+						</li>
+						<li class="active">
+							<a>电话</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="um-header-right ti-menu mr5" data-placement="bottom-left"></a>
+			</div>
+			<div class="um-content">
+				<div class="um-input-search">
+					<input type="search" class="form-control" placeholder="搜索">
+					<span class="um-input-cancle">取消</span>
+				</div>
+			</div>
+		</div>
+		<div class="um-sidebar um-sidebar-left" id="left_sidebar">
+			<div class="um-content">
+				<div class="um-list">
+					<a href="#p2"  class="um-list-item">
+						<div class="um-list-item-media um-icon-ios um-icon-ios-general"></div>
+						<div class="um-list-item-inner">
+							<div class="um-list-item-body">
+								通知
+							</div>
+						</div>
+					</a>
+					<a href="#p2"  class="um-list-item">
+						<div class="um-list-item-media um-icon-ios um-icon-ios-sounds"></div>
+						<div class="um-list-item-inner">
+							<div class="um-list-item-body">
+								控制中心
+							</div>
+							<div class="um-list-item-right">
+								<span class="um-badge um-btn-info mr10">4</span>
+							</div>
+						</div>
+					</a>
+					<a href="#p2" class="um-list-item">
+						<div class="um-list-item-media um-icon-ios um-icon-ios-phone"></div>
+						<div class="um-list-item-inner">
+							<div class="um-list-item-body">
+								勿扰模式
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="um-list">
+					<a href="#p2"  class="um-list-item">
+						<div class="um-list-item-media um-icon-ios um-icon-ios-icoud"></div>
+						<div class="um-list-item-inner">
+							<div class="um-list-item-body">
+								控制中心
+							</div>
+							<div class="um-list-item-right">
+								<span class="um-badge um-btn-info mr10">4</span>
+							</div>
+						</div>
+					</a>
+					<a href="#p2" class="um-list-item">
+						<div class="um-list-item-media um-icon-ios um-icon-ios-notes"></div>
+						<div class="um-list-item-inner">
+							<div class="um-list-item-body">
+								勿扰模式
+							</div>
+						</div>
+					</a>
+				</div>
+				<div class="um-btn" onclick="closeAll()">关闭</div>
+			</div>
+			<div class="um-box-justify f14 pl15 pr15 pt5 pb5">
+				<a href="#">
+				<i class="ti-settings mr5 vm"></i>设置</a>
+				<a href="#"><i class="ti-time mr5 vm"></i>时间</a>
+				<a href="#">北京</a>
+			</div>
+		</div>
+	</body>
+</html>

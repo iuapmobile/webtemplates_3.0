@@ -1,0 +1,23 @@
+ <div class="um-sortlist" id="sortList">
+            <ul class="um-sortlist-content" data-bind="foreach:contacts">
+                <li class="um-sortlist-group">
+                    <a  class="um-box-vc  um-sortlist-title"><span class="um-sortlist-icon"><i class="ti-angle-down"></i></span><span data-bind="text:gname"></span></a>
+                    <ul class="um-list um-no-active" data-bind="foreach:row">
+                        <li class="um-sortlist-row">
+                            <a href="#" class="um-list-item um-swipe-action">
+                                <div class="um-list-item-media">
+                                    <img alt="" class="um-circle" width=50 data-bind="attr:{src: img}">
+                                </div>
+                                <div class="um-list-item-inner">
+                                    <div class="um-list-item-body">
+                                        <h4 data-bind="text:name" class="f14"></h4>
+										<p class="f14 um-text-overflow"><i class="ti-mobile um-blue vm"></i><span class="ml5" data-bind="text:tel"></span></p>
+                                        <p class="f14 um-text-overflow"><i class="ti-email um-blue vm"></i><span class="ml5" data-bind="text:email"></span></p>
+                                    </div>       
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>

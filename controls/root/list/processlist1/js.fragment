@@ -1,0 +1,30 @@
+<script>
+			$(function() {
+				var data = [{
+					"loc" : "北京市",
+					"msg" : "快件已签收",
+					"time" : "2016/1/13 13:35:00"
+				}, {
+					"loc" : "北京市",
+					"msg" : "北京建国门小明正在派件，联系电话是13051011111",
+					"time" : "2016/1/13 12:10:00"
+				}, {
+					"loc" : "北京市",
+					"msg" : "北京市内部已发出",
+					"time" : "2016/1/13 08:50:20"
+				}, {
+					"loc" : "北京市",
+					"msg" : "快件到达快递集散中心",
+					"time" : "2016/1/13 01:40:25"
+				}, {
+					"loc" : "上海市",
+					"msg" : "上海航空部已发出",
+					"time" : "2016/1/12 23:45:10"
+				}];
+				var ViewModel = function() {
+				};
+				var viewModel = new ViewModel();
+				viewModel.data = ko.observableArray(data);
+				ko.applyBindings(viewModel);
+			});
+</script>

@@ -1,0 +1,17 @@
+<div class="um-grid um-row f12">
+	<div class="um-grid-row tc um-box-vc">
+		<div class="um-border-right">
+			<div class="f16 fb">2.66万</div>
+			<div class="um-gray">全部宝贝</div>
+		</div>
+		<div class="um-border-right">
+			<div class="f16 fb">10.8万</div>
+			<div class="um-gray">关注人数</div>
+		</div>
+		<div>
+			<div><span class="um-gray">宝贝描述</span> <span class="um-red">4.9</span>&nbsp;<span style="padding:1px;"class="um-bgc-red um-white">高</span></div>
+			<div><span class="um-gray">卖家服务</span> <span class="um-red">4.9</span>&nbsp;<span style="padding:1px;"class="um-bgc-red um-white">高</span></div>
+			<div><span class="um-gray">物流服务</span> <span class="um-red">4.9</span>&nbsp;<span style="padding:1px;"class="um-bgc-red um-white">高</span></div>
+		</div>
+	</div>
+</div>

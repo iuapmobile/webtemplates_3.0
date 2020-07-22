@@ -1,0 +1,30 @@
+<script src="js/islider.js"></script>
+<script>
+$(function() {
+	var list = [{
+		content: "img/love.png"
+	}, {
+		content: "img/sun.png"
+	}, {
+		content: "img/waite.png"
+	}];
+
+	var islider = new iSlider({
+		type: 'pic',
+		data: list,
+		dom: document.getElementById("iSlider-wrapper"),
+		isVertical: true,
+		isLooping: true,
+		animateType: 'card',
+		onslidechange: function(idx) {
+			if (this.isLooping === false) {
+				if (idx === this.data.length - 1) {
+					document.getElementById('iSlider-arrow').style.display = 'none';
+				} else {
+					document.getElementById('iSlider-arrow').style.display = 'block';
+				}
+			}
+		}
+	});
+})
+</script>

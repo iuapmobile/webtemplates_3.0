@@ -1,0 +1,4 @@
+<label class="um-switch2 um-box-vc">
+	<input type="checkbox" class="um-switch2" />
+	<span class="um-switch2-check" data-on-text="打开" data-off-text="关闭"></span>
+</label>

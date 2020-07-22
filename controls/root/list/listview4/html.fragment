@@ -1,0 +1,38 @@
+<div class="um-listview-wrap" id="listview">
+            <ul class="um-list um-no-active" data-bind="foreach:data">
+                <li class="um-listview-row">
+                    <a href="#" class="um-list-item um-swipe-action um-no-icon">
+                        <div class="um-swipe-btns">
+                            <span class="um-swipe-btn um-delete">删除</span>
+                        </div>
+                        <div class="um-list-item-media">
+                            <label class="um-check-inline um-list-left-icon">
+                                <input name="um-checkbox-inline" type="checkbox">
+                                <span class="um-icon-checkbox um-css3-vc"></span> </label>
+                            <img alt="" width=94 class="um-rounded" data-bind="attr:{src: img}">
+                        </div>
+                        <div class="um-list-item-inner">
+                            <div class="um-list-item-body" style="padding-right:15px;">
+                                <p data-bind="text:title" class="f14 fb listview-detail" style="height:40px;"></p>
+
+                                <p data-bind="text:detail" class="f14 um-gray um-text-overflow"></p>
+
+                                <div class="um-row p10 pr0 f16">
+                                    <div class="fl um-red">
+                                        <span data-bind="text:currency"></span>
+                                        <span data-bind="text:price"></span>
+                                    </div>
+                                    <div class="fr pr5">
+                                        <span class="cart-reduce" data-bind="click: $parent.reduceNum">-</span>
+                                        <input class="cart-count" type="number" data-bind="value:num">
+                                        <span class="cart-add" data-bind="click:$parent.addNum">+</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>

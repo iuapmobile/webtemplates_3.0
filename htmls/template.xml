@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template>
+	<categorys>
+		<category id="page" name="新页面">
+			<case id="page1" desc="空白页"/>
+			<case id="page2" desc="带底部工具栏"/>
+			<case id="page3" desc="多页应用,底部工具栏固定不动"/>
+			<case id="page4" desc="默认引入require"/>
+		</category>
+		<category id="index" name="主页">
+			<case id="meituan" desc="带画廊和导航的主页"/>
+			<case id="hgd" desc="申报主页"/>
+			<case id="islider" desc=""/>
+		</category>
+		<category id="sidebar" name="侧边栏">
+			<case id="left" desc="左边侧边栏，设置push效果"/>
+			<case id="right" desc="右边侧边栏，默认效果"/>
+			<case id="F7_left_right" desc="F7_left_right"/>
+		</category>
+		<category id="form" name="表单">
+			<case id="form1" desc="表单录入"/>
+			<case id="form2" desc="新增日程表单"/>
+		</category>
+		<category id="nav" name="导航">
+			<case id="fullnav" desc="fullnav"/>
+		</category>
+		<category id="list" name="列表">
+			<case id="list1" desc="采购订单"/>
+			<case id="list2" desc="个人中心设置"/>
+			<case id="list3" desc="商城分类"/>
+			<case id="list4" desc="商城多级分类"/>
+			<case id="list5" desc="简单设置"/>
+			<case id="list6" desc="仿空间分享"/>
+			<case id="crud1" desc="订单审批"/>
+		</category>
+		<category id="calendar" name="日程管理">
+			<case id="calendar1" desc="管理每日日程"/>
+		</category>
+		<category id="account" name="登录注册">
+			<case id="account1" desc="账号密码注册"/>
+			<case id="account2" desc="分场景注册"/>
+			<case id="account3" desc="第三方账号登录"/>
+			<case id="account4" desc="登录注册"/>
+		</category>
+		<category id="actionsheet" name="浮动菜单">
+			<case id="popover" desc="带顶部下拉菜单"/>
+			<case id="actionsheet" desc="actionsheet"/>
+			<case id="poppicker" desc="poppicker"/>
+		</category>
+		<category id="swipeContent" name="滑动页面">
+			<case id="swipeContent3" desc="内容区和底部工具栏联动"/>
+		</category>
+	</categorys>
+</template>

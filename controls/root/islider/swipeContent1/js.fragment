@@ -1,0 +1,33 @@
+   <script>
+        $(function() {
+				var data = [{
+					"img":"img/swipeNews1.png",
+					"title":"中企首次拿下阿联酋电力项目 金额达18亿美元",
+					"pubdate": "2015-10-18 10:20:27",
+					"brief":"据新华社电 阿联酋迪拜水电局近日宣布，中国哈尔滨电气国际工程公司(哈电国际)和沙特电力组成的联合体预中标迪拜Hassyan清洁煤电站一期项目，项目金额18亿美元。",
+					"hits": 613
+				},{
+					"img":"img/swipeNews2.png",
+					"title":"全球金融体系恐将重新洗牌",
+					"pubdate": "2015-10-18 10:20:27",
+					"brief":"哈电国际和沙特电力组成的联合体预中标阿联酋一清洁煤电站项目，金额达18亿美元据新华社电 阿联酋迪拜水电局近日宣布",
+					"hits": 570
+				},{
+					"img":"img/swipeNews3.png",
+					"title":"房地产税立法或再次延期",
+					"pubdate": "2015-10-18 10:20:27",
+					"brief":"作为建立楼市长效机制中不可或缺的政策设计，多年来，房地产税的推进却始终徘徊不前。",
+					"hits": 890
+				}];
+				var ViewModel = function(){};
+				var viewModel = new ViewModel();
+				viewModel.data = ko.observableArray(data);
+				ko.applyBindings(viewModel);
+				
+				var slider = $("#slider").swipeContent({
+					auto: 2500,
+					continuous : true
+					
+				});		
+		 });
+    </script>

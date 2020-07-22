@@ -1,0 +1,17 @@
+<div class="um-check-group um-check-group-left">
+	<label class="um-check-group-item">
+		<input name="um-leftRadio" type="radio" value="单选框1" checked>
+		<span class="um-icon-check um-css3-vc"></span>
+		<span class="um-black">单选框1 </span>
+	</label>
+	<label class="um-check-group-item">
+		<input name="um-leftRadio" type="radio" value="单选框2">
+		 <span class="um-icon-check um-css3-vc"></span>
+		 <span class="um-black">单选框2</span>
+	</label>
+	<label class="um-check-group-item">
+		<input name="um-leftRadio" type="radio" value="单选框3">
+		<span class="um-icon-check um-css3-vc"></span>
+		<span class="um-black">单选框3</span> 
+	</label>
+</div>

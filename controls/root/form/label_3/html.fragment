@@ -1,0 +1,8 @@
+<label class="um-label um-box-justify">
+	<div>
+		部门
+	</div>
+	<div>
+		<input type="text" class="form-control tr" placeholder="请输入所在部门">
+	</div>
+</label>

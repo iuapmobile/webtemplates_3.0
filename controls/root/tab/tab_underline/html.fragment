@@ -1,0 +1,6 @@
+<ul class="um-tabbar um-tabbar-underline">
+    <li><a>用户</a></li>
+    <li class="active"><a>应用</a></li>
+    <li><a>社区</a></li>
+    <li><a>企业</a></li>
+</ul>

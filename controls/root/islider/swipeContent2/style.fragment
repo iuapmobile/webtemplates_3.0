@@ -1,0 +1,9 @@
+<style>
+	    	.swipe-words {
+	    	   position:absolute;
+	    	   bottom:0;
+	    	   height:180px;
+	    	   background-color: rgba(0,0,0,0.5);
+	    	   color: #efeff4;
+	    	}
+</style>

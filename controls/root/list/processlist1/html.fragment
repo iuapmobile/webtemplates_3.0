@@ -1,0 +1,12 @@
+<div class="um-list">
+	<div class="um-process" data-bind="foreach: data">
+		<a href="#" class="um-list-item">
+		  <div class="um-list-item-inner">
+			  <div class="um-list-item-body">
+				 <p class="f14 fb">【<span data-bind="text:loc"></span>】<span data-bind="text:msg"></span></p>
+				 <p class="um-gray um-text-overflow2 f12 mt5" data-bind="text: time"></p>
+			  </div>
+	      </div> 
+		</a>
+	</div>
+</div>

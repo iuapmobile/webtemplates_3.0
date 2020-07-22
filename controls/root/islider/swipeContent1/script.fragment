@@ -1,0 +1,3 @@
+<script src="js/swipe.js" ></script>
+<script src="js/swipeContent.js" ></script>
+<script src="js/knockout-2.2.0.js"></script>

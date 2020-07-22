@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link href="css/fullcalendar-1.6.4.css" rel="stylesheet">
+		<link href="css/iuapmobile.um.calendar-2.7.0.css" rel="stylesheet">
+		<style>
+			.um-header {
+				height: auto;
+			}
+
+			.um-list {
+				margin-top: 0;
+			}
+			.editBtn {
+				padding: 5px;
+				border: 1px solid #28C0C6;
+				border-radius: 4px;
+				font-size: 14px;
+				color: #28C0C6;
+			}
+
+			.removeBtn {
+				padding: 5px;
+				border: 1px solid red;
+				border-radius: 4px;
+				font-size: 14px;
+				color: red;
+			}
+		</style>
+
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script src="js/knockout-2.2.0.js"></script>
+		<script src="js/fullcalendar-1.6.4.js"></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.calendar-2.7.0.js"></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				//alert("webview ready");
+			}
+
+			$(function() {
+				var $calendar = $("#calendar");
+				var now = new Date();
+				var events = JSON.parse(localStorage.getItem("calendarEvents"));
+				events = (events !== null && Array.isArray(events)) ? events : [{
+					title : "XX产品发布会",
+					desc : "不可错过",
+					start : now.getFullYear() + "-" + (now.getMonth() + 1) + "-1 9:00",
+					end : now.getFullYear() + "-" + (now.getMonth() + 1) + "-3 9:00",
+					allDay : true
+				}, {
+					title : "XX座谈会",
+					desc : "非常重要",
+					start : now.getFullYear() + "-" + (now.getMonth() + 1) + "-5 9:00",
+					end : now.getFullYear() + "-" + (now.getMonth() + 1) + "-7 9:00",
+					allDay : false
+				}];
+				var calendar = UM.calendar("#calendar", {
+					buttonText : {
+						prev : "<img src='img/cal_arrow_l.png' width=30></img>",
+						next : "<img src='img/cal_arrow_r.png' width=30></img>"
+					},
+					dayClick : function(date, jsEvent, view) {
+						var events = calendar.getEvents(date);
+						$calendar.fullCalendar("gotoDate", date);
+						viewModel.dayEvents([]);
+						viewModel.dayEvents(events);
+						UM.page.changePage({
+							target : "#eventlist"
+						})
+
+					},
+
+					//事件源
+					events : events
+				});
+
+				$("#changeView").delegate("a", "click", function() {
+					var viewName = $(this).attr("id");
+					switch(viewName) {
+						case "month":
+							calendar.$elem.fullCalendar("changeView", "month");
+							break;
+						case "day":
+							calendar.$elem.fullCalendar("changeView", "agendaDay");
+							break;
+					}
+				});
+				
+                $(window).on("unload",function(event) {
+                	var clientEvents = calendar.getEvents();
+					localStorage.setItem("calendarEvents", JSON.stringify(clientEvents));
+                });
+				
+				
+
+				//Knockout绑定
+				var ViewModel = function() {
+
+				};
+
+				var viewModel = new ViewModel();
+
+				//新增页面事件对象
+				viewModel.eventForAdd = ko.observable({
+					title : "",
+					start : "",
+					end : "",
+					desc : "",
+					allDay : false
+				});
+
+				//编辑页面事件对象
+				viewModel.eventForUpdate = ko.observable({
+					title : "",
+					start : "",
+					end : "",
+					desc : "",
+					allDay : false
+				});
+
+				//事件列表页面事件对象
+				viewModel.dayEvents = ko.observableArray([]);
+
+				viewModel.dayEventsRowIndex = ko.observable(0);
+
+				//移除事件
+				viewModel.removeEvent = function(data, e) {
+					$calendar.fullCalendar("removeEvents", data._id);
+					$calendar.fullCalendar("distory");
+					$calendar.fullCalendar("render");
+					viewModel.dayEvents.remove(data);
+				};
+
+				//新增事件
+				viewModel.addEvent = function() {
+					var event = viewModel.eventForAdd();
+					if (!event.start) {
+						alert("开始时间未设置");
+						return;
+					}
+					calendar.$elem.fullCalendar("renderEvent", event, true);
+					UM.page.back();
+				};
+
+				//更新事件
+				viewModel.updateEvent = function() {
+					var dayEvents = viewModel.dayEvents();
+					var event = viewModel.eventForUpdate();
+					var dayEventsRowIndex = viewModel.dayEventsRowIndex();
+					if (!event.start) {
+						alert("开始时间未设置");
+						return;
+					}
+					dayEvents[dayEventsRowIndex] = event;
+					viewModel.dayEvents([]);
+					viewModel.dayEvents(dayEvents);
+					$calendar.fullCalendar("updateEvent", event, true);
+					$calendar.fullCalendar("distory");
+					$calendar.fullCalendar("render");
+					UM.page.back();
+				};
+
+				//页面跳转到新增页面
+				viewModel.naviToAddPage = function() {
+					viewModel.eventForAdd({
+						title : "",
+						start : $.fullCalendar.formatDate(new Date(), "yyyy-MM-dd'T'HH:mm"),
+						end : $.fullCalendar.formatDate(new Date(), "yyyy-MM-dd'T'HH:mm"),
+						desc : "",
+						allDay : false
+					});
+				}
+				//页面跳转到编辑页面
+				viewModel.naviToUpdatePage = function(data, e) {
+					var index = $(e.target).closest("li").index();
+					data.start = $.fullCalendar.formatDate(new Date(data.start), "yyyy-MM-dd'T'HH:mm");
+					if (data.end) {
+						data.end = $.fullCalendar.formatDate(new Date(data.end), "yyyy-MM-dd'T'HH:mm");
+					}
+					viewModel.dayEventsRowIndex(index);
+					viewModel.eventForUpdate(data);
+				}
+
+				ko.applyBindings(viewModel);
+			});
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+
+			<div class="um-header">
+				<h3>我的日程</h3>
+				<a href="#addPage" class="um-header-right ti-plus" data-bind = "click:naviToAddPage"></a>
+
+				<ul class="um-tabbar um-tabbar-underline" id="changeView">
+					<li class="active">
+						<a href="#" id="month">月视图</a>
+					</li>
+					<li>
+						<a href="#" id="day">日视图</a>
+					</li>
+				</ul>
+			</div>
+			<div class="um-content">
+				<div id="calendar" class="um-calendar"></div>
+			</div>
+
+			<div class="um-footer">
+				<div class="um-tabbar-foot">
+					<a href="#" class="um-tabbar-item"> <i class="ti-menu-alt f24"></i>
+					<div class="um-tabbar-item-text">
+						企业审核
+					</div> </a>
+					<a href="#" class="um-tabbar-item"> <i class="ti-bar-chart f24"></i>
+					<div class="um-tabbar-item-text">
+						业绩分析
+					</div> </a>
+					<a href="#" class="um-tabbar-item active"> <i class="ti-pencil-alt f24"></i>
+					<div class="um-tabbar-item-text">
+						日程管理
+					</div> </a>
+					<a href="#" class="um-tabbar-item"> <i class="ti-user f24"></i>
+					<div class="um-tabbar-item-text">
+						个人中心
+					</div> </a>
+					<a href="#" class="um-tabbar-item"> <i class="ti-settings f24"></i>
+					<div class="um-tabbar-item-text">
+						设置
+					</div> </a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="um-page" id="addPage">
+			<div class="um-header" >
+				<a href="#" class="um-back"> 返回</a>
+				<h3>新增事件</h3>
+				<a href="#" class="um-header-right ti-save" data-bind="click: addEvent"></a>
+			</div>
+			<div class="um-content">
+				<form  data-bind="with: eventForAdd">
+					<ul class="um-list">
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+									<div class="um-list-item-left">
+										标题：
+									</div>
+									<div class="um-list-item-right">
+										<input type="text" class="form-control" data-bind="value:title" placeholder="请输入事件标题">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+									<div class="um-list-item-left">
+										开始时间：
+									</div>
+									<div class="um-list-item-right">
+										<input id="start" type="datetime-local" valueAsDate data-bind="value: start"  class="form-control">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<div class="um-list-item-left">
+										结束时间：
+									</div>
+									<div class="um-list-item-right">
+										<input type="datetime-local" data-bind="value:end" class="form-control">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<div class="um-list-item-left">
+										是否全天：
+									</div>
+									<div class="um-list-item-right">
+
+										<label class="um-switch1">
+											<input type="checkbox" value="on" checked="checked" data-bind="checked:allDay">
+											<div class="um-track">
+												<div class="um-handle"></div>
+											</div> </label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										备注(如下)：
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										<textarea data-bind="value:desc" style="height:80px;vertical-align:middle" class="form-control" placeholder="请在此输入备注..."></textarea>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div class="um-page" id="updatePage">
+			<div class="um-header" >
+				<a href="#" class="um-back"> 返回</a>
+				<h3>编辑事件</h3>
+				<a href="#" class="um-header-right ti-save" data-bind="click: updateEvent"></a>
+			</div>
+			<div class="um-content">
+				<form id="scheduleBody" data-bind="with: eventForUpdate">
+					<ul class="um-list">
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+									<div class="um-list-item-left">
+										标题：
+									</div>
+									<div class="um-list-item-right">
+										<input type="text" class="form-control" data-bind="value:title" placeholder="请输入事件标题">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<span class="h pa um-box-vc um-red f20" style="margin-left:-10px;">*</span>
+									<div class="um-list-item-left">
+										开始时间：
+									</div>
+									<div class="um-list-item-right">
+										<input type="datetime-local" data-bind="value: start"  class="form-control">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<div class="um-list-item-left">
+										结束时间：
+									</div>
+									<div class="um-list-item-right">
+										<input type="datetime-local" data-bind="value:end" class="form-control">
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+								<div class="um-list-item-inner">
+									<div class="um-list-item-left">
+										是否全天：
+									</div>
+									<div class="um-list-item-right">
+
+										<label class="um-switch1">
+											<input type="checkbox" value="on" checked="checked" data-bind="checked:allDay">
+											<div class="um-track">
+												<div class="um-handle"></div>
+											</div> </label>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										备注(如下)：
+									</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="um-list-item">
+
+								<div class="um-list-item-inner">
+									<div class="um-list-item-body">
+										<textarea data-bind="value:desc" style="height:80px;vertical-align:middle" class="form-control" placeholder="请在此输入备注..."></textarea>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</div>
+		<div class="um-page" id="eventlist">
+			<div class="um-header" >
+				<a href="#" class="um-back">返回</a>
+				<h3>事件列表</h3>
+			</div>
+
+			<div class="um-content">
+				<p class="tc mt50" data-bind="visible: dayEvents().length==0">
+					暂时没有任何事件
+				</p>
+				<ul class="um-list um-no-active" data-bind="foreach:dayEvents">
+					<li>
+						<div class="um-list-item um-no-icon">
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<div data-bind="text:title" class="f16 fb"></div>
+									<p data-bind="text:desc" class="mt5 f14 um-text-overflow"></p>
+								</div>
+								<div class="um-list-item-right">
+									<div>
+										<a href="#updatePage" class="editBtn" data-bind = "click:$parent.naviToUpdatePage">编辑</a>
+										<a href="#" class="removeBtn" data-bind="click:$parent.removeEvent">移除</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

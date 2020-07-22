@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<template>
+  <id>iUAPHgApprove</id>
+  <name>审批系统</name>
+  <group>模仿秀</group>
+  <version>1.0</version>
+  <desc>审批系统模板</desc>
+  <theme>blue</theme> 
+- <!-- theme>ios7,blue,gray,green,orange,red</theme
+  -->
+</template>

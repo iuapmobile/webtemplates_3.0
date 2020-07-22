@@ -1,0 +1,57 @@
+<script>
+        $(function() {
+          
+            //Knockout绑定
+            var ViewModel = function() {
+                
+            };
+                    
+            var jsonArray = [
+            	{'company':'国家电网公司','order_id':'000000000001','order_status':'待审核','order_money':'1,500','currency':'$','order_date':'2015-01-01','delivery_date':'2015-01-02','contact_name':'小明','contact_tel':'130********','if_store':false, 'memo':'记得及时发货'},
+            	{'company':'中国移动通信集团公司','order_id':'000000000002','order_status':'待确认','order_money':'11,000','currency':'$','order_date':'2015-01-01','delivery_date':'2015-01-02','contact_name':'小明','contact_tel':'130********','if_store':false, 'memo':'记得及时发货'},
+            	{'company':'中国人寿保险(集团)公司','order_id':'000000000003','order_status':'已关闭','order_money':'22,100','currency':'$','order_date':'2015-01-01','delivery_date':'2015-01-02','contact_name':'小明','contact_tel':'130********','if_store':false, 'memo':'记得及时发货'}         	
+            ]   
+            
+            var viewModel = new ViewModel();           
+            viewModel.data = ko.observableArray(jsonArray);
+            ko.applyBindings(viewModel);
+
+			//构造控件实例
+            var listview = UM.listview('#listview');
+			
+            //添加控件方法
+            listview.on('pullDown', function(sender) {
+                //这是可以编写列表下拉加载逻辑，参数sender即为当前列表实例对象
+                /* var row = {'company':'中国兵器装备集团公司','order_id':'000000000000','order_status':'待审核','order_money':'1,500','currency':'$','order_date':'2015-01-01','delivery_date':'2015-01-02','contact_name':'小明','contact_tel':'130********','if_store':false, 'memo':'记得及时发货'};
+                viewModel.data.unshift(row);*/
+                sender.refresh(); 
+            });
+            listview.on('pullUp', function(sender) {
+                //这是可以编写列表上拉刷新逻辑，参数sender即为当前列表实例对象
+                /* var row = {'company':'宝钢集团有限公司','order_id':'000000000006','order_status':'待审核','order_money':'2,500','currency':'$','order_date':'2015-01-01','delivery_date':'2015-01-02','contact_name':'小明','contact_tel':'130********','if_store':false, 'memo':'记得及时发货'};
+                viewModel.data.push(row); */
+                sender.refresh(); 
+            });
+            listview.on('itemDelete', function(sender, args) {
+                //这是可以编写行删除逻辑，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+                /* args.$target.slideUp(500, function() {
+                    var item = viewModel.data()[args.rowIndex];
+                    viewModel.data.remove(item);
+                }); */
+            });
+            listview.on('itemClick', function(sender, args) {
+                //这里可以处理行点击事件，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+                //alert('您点击了列表第' + (args.rowIndex + 1) + "行！");
+
+            });
+            listview.on('itemSwipeLeft', function(sender, args) {
+                //这里可以处理行左滑事件，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+                //sender.showItemMenu(args.$target);
+               
+            });
+            listview.on('tapHold', function() {
+                //这里可以处理长按事件
+				//console.log('您长按了列表！');
+            });
+        });
+    </script>

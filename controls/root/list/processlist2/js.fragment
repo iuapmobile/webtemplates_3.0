@@ -1,0 +1,30 @@
+<script>
+			$(function() {
+				var data = [{
+					"approver" : "集团中心副总裁",
+					"status":"已审批",
+					"opinion" : "审批通过",
+					"time" : "2016/1/13 12:10:00"
+				}, {
+					"approver" : "采购部总经理",
+					"status":"已审批",
+					"opinion" : "审批通过",
+					"time" : "2016/1/13 08:50:20"
+				}, {
+					"approver" : "财务部负责人",
+					"status":"已审批",
+					"opinion" : "审批通过",
+					"time" : "2016/1/13 01:40:25"
+				}, {
+					"approver" : "部门经理",
+					"status":"已审批",
+					"opinion" : "审批通过",
+					"time" : "2016/1/12 23:45:10"
+				}];
+				var ViewModel = function() {
+				};
+				var viewModel = new ViewModel();
+				viewModel.data = ko.observableArray(data);
+				ko.applyBindings(viewModel);
+			});
+</script>

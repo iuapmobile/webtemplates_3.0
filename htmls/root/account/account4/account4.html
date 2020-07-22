@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+
+			$(function() {
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-header">
+				<a href="#" class="um-back"></a>
+				<h3>用户登录</h3>
+			</div>
+			<div class="um-content">
+				<div class="um-input-text mt10">
+					<input type="text" class="form-control" placeholder="用户名">
+				</div>
+				<div class="um-input-text mt10">
+					<input type="text" class="form-control" placeholder="密码">
+				</div>
+				<div class="um-box-justify mt30">
+					<a href="#setting" class="f14">设置</a>
+					<div>
+						<span class="f14">自动登录</span>
+						<label class="um-switch1">
+							<input type="checkbox" value="on" checked="checked">
+							<div class="um-track">
+								<div class="um-handle"></div>
+							</div> </label>
+					</div>
+				</div>
+				<div class="um-row">
+					<button class="btn um-no-brs um-btn-gray mt20">
+						<i class="ti-arrow-right f20"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+
+		<div class="um-page" id="setting">
+			<div class="um-header" >
+				<a href="#" class="um-back">返回</a>
+				<h3>设置连接</h3>
+			</div>
+
+			<div class="um-content">
+				<div class="um-box">
+					<div class="um-input-text um-bf1 mr10">
+						<input type="text" class="form-control" placeholder="地址">
+					</div>
+					<div class="um-input-text w80">
+						<input type="text" class="form-control" placeholder="端口">
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</body>
+</html>

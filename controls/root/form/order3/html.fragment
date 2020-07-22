@@ -1,0 +1,60 @@
+<form action="" >
+    <ul class="um-list">
+        <li class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-body">
+                    主题
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control tr" placeholder="请输入会议主题">
+                </div>
+            </div>
+        </li>
+        <li class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-body">
+                    是否重要
+                </div>
+                <div class="um-list-item-right">
+                    <label class="um-switch1">
+                        <input type="checkbox" value="on" checked="checked">
+                        <div class="um-track">
+                            <div class="um-handle">
+                            </div>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </li>
+        <li class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-body">
+                    会议时长
+                </div>
+                <div class="um-list-item-right">
+                    <input type="range" />
+                </div>
+            </div>
+        </li>
+        <li class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-body">
+                    发起人
+                </div>
+                <div class="um-list-item-right">
+                    王兵
+                </div>
+            </div>
+        </li>
+        <li class="um-list-item">
+            <div class="um-list-item-inner">
+                <div class="um-list-item-body">
+                    会议室
+                </div>
+                <div class="um-list-item-right">
+                    <input type="text" class="form-control tr" placeholder="请输入会议室">
+                </div>
+            </div>
+        </li>
+    </ul>
+</form>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">	
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>	
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		
+		<script>
+			function $pageReady() {
+				/*这里编写与原生服务相关的代码逻辑，例如对原生设备服务的调用，对网络服务的调用等*/
+				//alert("Mobile Native Ready");
+			}
+
+			$(function() {
+
+			});
+		</script>
+	</head>
+	<body>
+		<div class="um-page">
+			<div class="um-header" >
+				<a href="index.html" class="um-back"> 返回</a>
+				<h3>列表</h3>
+				<a href="#" class="um-header-right ti-home"></a>
+			</div>
+			<div class="um-content">
+
+				<ul class="um-list">
+					<li>
+						<a href="javascript:;" class="btn">
+							<div class="um-media-left">
+								<img class="um-circle" height="40" width="40" src="img/portal.jpg" alt="...">
+							</div>
+							<div class="um-media-body">
+								<h4>姓名</h4>
+								<p>
+									这里是一段描述
+								</p>
+							</div>
+						</a>
+					</li>
+				</ul>
+				<ul class="um-list">
+					<li>
+						<a class="btn" href="javascript:;">门户服务器</a>
+					</li>
+					<li>
+						<a class="btn" href="javascript:;">应用列表</a>
+					</li>
+				</ul>
+
+				<ul class="um-list">
+					<li >
+						<a href="javascript:void(0);" class="um-collapse-btn btn">更多...</a>
+						<ul class="um-list um-collapse-content">
+							<li>
+								<a class="btn" href="#">日程管理</a>
+							</li>
+							<li>
+								<a class="btn" href="#">发布微博</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</div>
+	</body>
+</html>

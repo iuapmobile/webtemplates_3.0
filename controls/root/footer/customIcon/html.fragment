@@ -1,0 +1,16 @@
+<div class="um-footer">
+    <div class="um-footerbar">
+        <a href="#" class="um-footerbar-item active">
+            <div class="icon-home mb5"></div>
+            <div class="f12 lh1">首页</div>
+        </a>
+        <a href="#" class="um-footerbar-item">
+            <div class="icon-msg mb5"></div>
+            <div class="f12 lh1">消息</div>
+        </a>
+        <a href="#" class="um-footerbar-item">
+            <div class="icon-share mb5"></div>
+            <div class="f12 lh1">分享</div>
+        </a>
+    </div>
+</div>

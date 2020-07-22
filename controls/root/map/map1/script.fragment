@@ -1,0 +1,2 @@
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=2cb30390679935b13ef2dc704d25346b">/*此处引用高德插件，须带上开发key,请自行替换  */</script>
+<script type="text/javascript" src="js/Frameworks/iuapmobile.frameworks.map-2.7.0.js"></script>

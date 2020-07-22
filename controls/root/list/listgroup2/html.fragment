@@ -1,0 +1,27 @@
+<div class="um-listgroup-wrap" id="listgroup">
+					<ul class="um-listgroup" data-bind="foreach:datas">
+						<li class="um-listgroup-group">
+							<a class="um-box-vc um-listgroup-title"><span class="um-listgroup-icon"><i
+								class="ti-angle-down"></i></span><span data-bind="text:gname"></span></a>
+							<ul class="um-list  um-no-active" data-bind="foreach:row">
+								<li class="um-listgroup-row">
+									<a href="#" class="um-list-item um-swipe-action">
+									<div class="um-swipe-btns">
+										<span class="um-swipe-btn um-delete">删除</span>
+									</div>
+									<div class="um-list-item-media">
+										<img alt="" width=80 data-bind="attr:{src: img}">
+									</div>
+									<div class="um-list-item-inner">
+										<div class="um-list-item-body">
+											<h4 data-bind="text:company" class="f16"></h4>
+											<p class="f14 um-text-overflow"><span class="um-blue ti-location-pin pr5"></span><span data-bind="text:address"></span></p>
+											<p class="f14 um-text-overflow"><span class="um-blue ti-pin-alt pr5"></span><span data-bind="text:scope"></span></p>
+											<p class="f14 um-text-overflow"><span class="um-blue ti-direction-alt pr5"></span><span data-bind="text:slogan"></span></p>
+										</div>
+									</div> </a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>

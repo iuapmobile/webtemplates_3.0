@@ -1,0 +1,4 @@
+<div class="um-input-text">
+	<span class="ti-lock um-input-left-icon"></span>
+	<input type="text" class="form-control" placeholder="Username">
+</div>

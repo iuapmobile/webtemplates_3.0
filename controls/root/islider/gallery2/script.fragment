@@ -1,0 +1,34 @@
+<script src="js/islider.js"></script>
+<script>
+$(function() {
+	var list = [{
+		content: "img/love.png"
+	}, {
+		content: "img/sun.png"
+	}, {
+		content: "img/waite.png"
+	}, ];
+	var islider = new iSlider({
+		type: 'pic',
+		data: list,
+		dom: document.getElementById("iSlider-wrapper"),
+		isLooping: true,
+		animateType: 'default',
+		onslideend: function(idx) {
+			$("#nav").find("li").eq(idx).addClass("active").siblings("li").removeClass("active");
+		},
+	});
+	//islider.addBtn();
+
+	$("#nav").find("li").on("click", function() {
+		$(this).addClass("active").siblings("li").removeClass("active");
+		var i = $(this).index();
+		islider.slideTo(i);
+	});
+	
+	$(islider.wrap).on("click",".islider-btn-outer",function(){
+		var i = islider.slideIndex;
+		$("#nav").find("li").eq(i).addClass("active").siblings("li").removeClass("active");
+	});	
+});
+</script>

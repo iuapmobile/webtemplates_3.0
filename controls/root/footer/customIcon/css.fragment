@@ -1,0 +1,26 @@
+<style>
+/* 设置背景图片 */
+.icon-home, .icon-msg, .icon-share {
+    height: 25px;
+    background: url(img/Home-25.png) center no-repeat;
+}
+.icon-msg {
+    background-image: url(img/About-25.png);
+}
+.icon-share {
+    background-image: url(img/Share-25.png);
+}
+/* 设置激活状态 */
+.um-footerbar-item.active {
+    color: rgb(252, 116, 122);
+}
+.um-footerbar-item.active .icon-home {
+    background-image: url(img/Home-25-active.png);
+}
+.um-footerbar-item.active .icon-msg {
+    background-image: url(img/About-25-active.png);
+}
+.um-footerbar-item.active .icon-share {
+    background-image: url(img/Share-25-active.png);
+}
+</style>

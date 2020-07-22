@@ -1,0 +1,23 @@
+<script type="text/javascript" src="js/islider.js"></script>
+<script>
+$(function() {
+	var list = [{
+		content: "img/g1.jpg"
+	}, {
+		content: "img/g2.jpg"
+	}, {
+		content: "img/g3.jpg"
+	}];
+
+	var islider = new iSlider({
+		type: 'pic',
+		data: list,
+		dom: document.getElementById("iSlider-wrapper"),
+		isLooping: true,
+		animateType: 'default',
+		isAutoplay: true,
+		animateTime: 800
+	});
+	islider.addDot();
+})
+</script>

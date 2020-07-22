@@ -1,0 +1,11 @@
+<div class="um-input-text">
+	<span class="ti-user um-input-left-icon"></span>
+	<input type="text" class="form-control" placeholder="用户名">
+</div>
+<div class="um-input-text">
+	<span class="ti-lock um-input-left-icon"></span>
+	<input type="text" class="form-control" placeholder="密码">
+</div>
+<div class="mt20">
+	<div class="btn um-btn-gray">登录</div>
+</div>

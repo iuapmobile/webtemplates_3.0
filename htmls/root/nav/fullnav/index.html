@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" href="css/nav-toggle.css">	
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>		
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady(){
+				alert("webview ready");
+			}
+			
+			$(function() {
+
+			});
+		</script>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-content">
+				<nav class="nav um-box-center">
+					
+					<div class="nav-toggle">
+						<div class="icon"></div>
+					</div>
+					<ul>
+						<li><a href="#">首页</a></li>
+						<li><a href="#">企业审核</a></li>
+						<li><a href="#">新增统计</a></li>
+						<li><a href="#">业绩分析</a></li>
+						<li><a href="#">个人中心</a></li>
+					</ul>
+				</nav>
+				<script>
+					$('.nav-toggle').click(function () {
+					$('body').toggleClass('nav-open');
+					});
+				</script>
+			</div>
+		</div>
+	</body>
+	</html>

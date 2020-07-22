@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<template
+version="1.0.0"
+name="controls"
+description="控件">
+	<categorys>
+		<category id="header" name="导航栏">
+			<case id="default" name="default" desc="基础导航栏" icon="root/header/default/default.png"/>
+			<case id="back" name="back" desc="带返回按钮的导航栏" icon="root/header/back/back.png"/>
+			<case id="home" name="home" desc="带返回按钮和右侧按钮的导航栏" icon="root/header/home/home.png"/>
+			<case id="menu" name="menu" desc="带左右按钮的导航栏" icon="root/header/menu/menu.png"/>
+			<case id="btns" name="btns" desc="右侧多个按钮的导航栏" icon="root/header/btns/btns.png"/>
+		</category>
+		<category id="list" name="列表">
+		    <case id="listview1" name="listview1" desc="新闻类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击，长按等事件)" icon="root/list/listview1/listview1.png"/>
+			<case id="listview2" name="listview2" desc="消息类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击，长按等事件)" icon="root/list/listview2/listview2.png"/>
+			<case id="listview3" name="listview3" desc="邮件类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击，长按等事件以及自定义侧滑菜单)" icon="root/list/listview3/listview3.png"/>
+			<case id="sortlist1" name="sortlist1" desc="联系人列表，支持Knockout动态加载，可折叠，滑动导航" icon="root/list/sortlist1/sortlist1.png"/>
+			<case id="processlist1" name="processlist1" desc="物流信息列表(动态,knockout)" icon="root/list/processlist1/processlist1.png"/>
+			<case id="processlist2" name="processlist2" desc="审批流程列表(动态,knockout)" icon="root/list/processlist2/processlist2.png"/>
+			<case id="listview4" name="listview4" desc="商品类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击，长按等事件)" icon="root/list/listview4/listview4.png"/>
+			<case id="listview5" name="listview5" desc="软件下载类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击等事件)" icon="root/list/listview5/listview5.png"/>
+			<case id="listview6" name="listview6" desc="采购订单类列表(动态,knockout,支持上下拉加载，侧滑删除，行点击等事件)" icon="root/list/listview6/listview6.png"/>
+			<case id="listview7" name="listview7" desc="商城分类列表(采用require机制，动态,jquery自定义模板)" icon="root/list/listview7/listview7.png"/>
+			<case id="listgroup1" name="listgroup1" desc="仿软件分类列表（动态，knockout，可折叠，支持上下拉加载，侧滑删除，行点击等事件）" icon="root/list/listgroup1/listgroup1.png"/>
+			<case id="listgroup2" name="listgroup2" desc="仿企业分支简介分组列表（动态，knockout，可折叠，支持上下拉加载，侧滑删除，行点击等事件）" icon="root/list/listgroup2/listgroup2.png"/>
+			<case id="default" name="default" icon="root/list/default/default.png"/>
+			<case id="commonList" name="commonList" icon="root/list/commonList/commonList.png"/>
+			<case id="cornorList" name="cornorList" icon="root/list/cornorList/cornorList.png"/>
+			<case id="settinglist" name="settinglist" icon="root/list/settinglist/settinglist.png"/>
+			<case id="detailList" name="detailList" icon="root/list/detailList/detailList.png"/>
+			<case id="imgList" name="imgList" icon="root/list/imgList/imgList.png"/>
+			<case id="corplist" name="corplist" icon="root/list/corplist/corplist.png"/>
+			<case id="connectlist" name="connectlist" icon="root/list/connectlist/connectlist.png"/>
+			<case id="salelist" name="salelist" icon="root/list/salelist/salelist.png"/>
+			<case id="groupList" name="groupList" icon="root/list/groupList/groupList.png"/>
+			<case id="iscrolllist" name="iscrolllist" icon="root/list/iscrolllist/display.png"/>
+		</category>
+		<category id="tab" name="选项卡">
+			<case id="normal" name="normal" desc="普通文字选项卡" icon="root/tab/normal/normal.png"/>
+			<case id="navbar_icon" name="navbar_icon" desc="图标选项卡" icon="root/tab/navbar_icon/navbar_icon.png"/>
+			<case id="tab_underline" name="tab_underline" desc="带下划线的选项卡" icon="root/tab/tab_underline/tab_underline.png"/>
+			<case id="navscroll" name="navscroll" desc="可滚动菜单" icon="root/tab/navscroll/navscroll.png"/>
+		</category>
+		<category id="footer" name="底部工具栏">
+			<case id="footer_default" name="footer_default" desc="" icon="root/footer/footer_default/footer_default.png"/>
+			<case id="footerText" name="footerText" desc="" icon="root/footer/footerText/footerText.png"/>
+			<case id="tabText" name="tabText" desc="文字居中排列" icon="root/footer/tabText/tabText.png"/><case id="footerIcon" name="footerIcon" desc="底部图标工具栏" icon="root/footer/footerIcon/footerIcon.png"/>
+			<case id="footerTextIcon" name="footerTextIcon" desc="底部图标和文字工具栏" icon="root/footer/footerTextIcon/footerTextIcon.png"/>
+			<case id="customIcon" name="customIcon" desc="自定义底部图标" icon="root/footer/customIcon/customIcon.png"/>
+		</category>
+		<category id="button" name="按钮">
+			<case id="btn" name="btn" desc="默认为块级按钮" icon="root/button/btn/btn.png"/>
+			<case id="btn_inline" name="btn_inline" desc="行内按钮" icon="root/button/btn_inline/btn_inline.png"/>
+			<case id="btn_mini" name="btn_mini" desc="mini按钮" icon="root/button/btn_mini/btn_mini.png"/>
+			<case id="btn_icon_left" name="btn_icon_left" desc="图标在左侧" icon="root/button/btn_icon_left/btn_icon_left.png"/>
+			<case id="btn_icon_right" name="btn_icon_right" desc="图标在右侧" icon="root/button/btn_icon_right/btn_icon_right.png"/>
+			<case id="btn_icon_top" name="btn_icon_top" desc="图标在上" icon="root/button/btn_icon_top/btn_icon_top.png"/>
+			<case id="btn_circle" name="btn_circle" desc="圆形按钮" icon="root/button/btn_circle/btn_circle.png"/>
+			<case id="btn_fileupload" name="btn_fileupload" desc="文件上传按钮" icon="root/button/btn_fileupload/btn_fileupload.png"/>
+			<case id="btn_gray" name="btn_gray" desc="灰色按钮" icon="root/button/btn_gray/btn_gray.png"/>
+			<case id="btn_colorful" name="btn_colorful" desc="多彩按钮" icon="root/button/btn_colorful/btn_colorful.png"/>
+			<case id="btn_group_h" name="btn_group_h" desc="水平按钮组" icon="root/button/btn_group_h/btn_group_h.png"/>
+			<case id="btn_group_justify" name="btn_group_justify" desc="宽度占满按钮组" icon="root/button/btn_group_justify/btn_group_justify.png"/>
+			<case id="btn_group_v" name="btn_group_v" desc="垂直按钮组" icon="root/button/btn_group_v/btn_group_v.png"/>
+		</category>
+		<category id="input" name="输入框">
+			<case id="textinput" name="textinput" desc="默认文字输入框" icon="root/input/textinput/textinput.png"/>
+			<case id="textinput2" name="textinput" desc="带清除输入文字按钮的输入框" icon="root/input/textinput2/textinput2.png"/>
+			<case id="search" name="search" desc="搜索框" icon="root/input/search/search.png"/>
+			<case id="search2" name="search2" desc="带取消按钮的搜索框" icon="root/input/search2/search2.png"/>
+			<case id="userinput" name="userinput" desc="用户名输入框" icon="root/input/userinput/userinput.png"/>
+			<case id="pswinput" name="pswinput" desc="密码输入框" icon="root/input/pswinput/pswinput.png"/>
+			<case id="input_border" name="input_border" desc="仅底部细线的输入框" icon="root/input/input_border/input_border.png"/>
+			<case id="numinput" name="numinput" desc="数字输入框" icon="root/input/numinput/numinput.png"/>
+			<case id="textarea" name="textarea" desc="多行文本输入框" icon="root/input/textarea/textarea.png"/>
+		</category>
+		<category id="radio" name="单选框">
+			<case id="radio" name="radio" desc="单选框组" icon="root/radio/radio/radio.png"/>
+			<case id="leftRadio" name="leftRadio" desc="" icon="root/radio/leftRadio/leftRadio.png"/>
+		</category>
+		<category id="checkbox" name="复选框">
+			<case id="checkbox" name="checkbox" desc="复选框组" icon="root/checkbox/checkbox/checkbox.png"/>
+			<case id="checkboxInline" name="checkboxInline" desc="行内复选框" icon="root/checkbox/checkboxInline/checkboxInline.png"/>
+		</category>
+		<category id="switch" name="开关">
+			<case id="normal" name="normal" desc="开关按钮" icon="root/switch/normal/normal.png"/>
+			<case id="switch2" name="switch2" desc="" icon="root/switch/switch2/switch2.png"/>
+		</category>
+		<category id="range" name="滑动条">
+			<case id="range" name="range" desc="滑动条" icon="root/range/range/range.png"/>
+			<case id="range2" name="range2" desc="" icon="root/range/range2/range2.png"/>
+		</category>
+		<category id="progress" name="进度条">
+			<case id="default" name="default" desc="默认进度条" icon="root/progress/default/default.png"/>
+			<case id="colorful" name="colorful" desc="" icon="root/progress/colorful/colorful.png"/>
+			<case id="mini" name="mini" desc="mini进度条" icon="root/progress/mini/mini.png"/>
+			<case id="line" name="line" desc="斑马线进度条" icon="root/progress/line/line.png"/>
+			<case id="striped" name="striped" desc="细线进度条" icon="root/progress/striped/striped.png"/>
+		</category>
+		<category id="time" name="日期">
+			<case id="date" name="date" desc="年/月/日 日期输入框" icon="root/time/date/date.png"/>
+			<case id="date_time" name="date_time" desc="年/月/日 时:分:秒 日期输入框" icon="root/time/date_time/date_time.png"/>
+		</category>
+		<category id="img" name="图片">
+			<case id="normal" name="normal" desc="普通图片" icon="root/img/normal/normal.png"/>
+			<case id="circle" name="circle" desc="圆形图片" icon="root/img/circle/circle.png"/>
+			<case id="rounded" name="rounded" desc="圆角图片" icon="root/img/rounded/round.png"/>
+			<case id="thumbnail" name="thumbnail" desc="相框图片" icon="root/img/thumbnail/thumbnail.png"/>
+		</category>
+		<category id="islider" name="画廊">
+			<case id="swipeImg" name="swipeImg" desc="" icon="root/islider/swipeImg/swipeImg.png"/>
+			<case id="swipeImg2" name="swipeImg2" desc="" icon="root/islider/swipeImg2/swipeImg2.png"/>
+			<case id="gallery2" name="gallery2" desc="" icon="root/islider/gallery2/gallery2.png"/>
+			<case id="scrollImgs" name="scrollImgs" desc="图片可滚动查看" icon="root/islider/scrollImgs/scrollImgs.png"/>
+			<case id="swipeContent1" name="swipeContent1" desc="图文滚动(上面图片，下面文字)" icon="root/islider/swipeContent1/swipeContent1.png"/>
+			<case id="swipeContent2" name="swipeContent2" desc="图文滚动（文字遮罩图片）" icon="root/islider/swipeContent2/swipeContent2.png"/>
+			<case id="gallery" name="gallery" desc="画廊单页" icon="root/islider/gallery/gallery.png"/>
+		</category>
+		<category id="calendar" name="日历">
+			<case id="calendar1" name="calendar1" desc="日历控件" icon="root/calendar/calendar1/calendar1.png"/>
+		</category>	
+		<category id="map" name="地图">
+			<case id="map1" name="map1" desc="高德地图" icon="root/map/map1/map1.png"/>
+		</category>
+		<category id="a" name="链接">
+			<case id="a" name="a" desc="普通a标签" icon="root/a/a/normal.png"/>
+			<case id="link" name="link" desc="带切换效果a链接" icon="root/a/link/link.png"/>
+			<case id="plus" name="plus" desc="添加按钮" icon="root/a/plus/plus.png"/>
+			<case id="del" name="del" desc="移出按钮" icon="root/a/del/del.png"/>
+			<case id="save" name="save" desc="保存按钮" icon="root/a/save/save.png"/>
+			<case id="pencil" name="pencil" desc="编辑按钮" icon="root/a/pencil/pencil.png"/>
+		</category>
+		<category id="label" name="标签">
+			<case id="label_1" name="label_1" desc="" icon="root/label/label_1/label_1.png"/>
+			<case id="label_2" name="label_2" desc="" icon="root/label/label_2/label_2.png"/>
+			<case id="label_3" name="label_3" desc="" icon="root/label/label_3/label_3.png"/>
+			<case id="label_4" name="label_4" desc="" icon="root/label/label_4/label_4.png"/>
+			<case id="label_5" name="label_5" desc="" icon="root/label/label_5/label_5.png"/>
+		</category>
+		<category id="dropdownlist" name="下拉框">
+			<case id="select" name="select" desc="" icon="root/dropdownlist/select/dropdownlist.png"/>
+		</category>
+		<category id="panel" name="面板">
+			<case id="panel1" name="panel1" desc="普通2个面板" icon="root/panel/panel1/panel1.png"/>
+			<case id="panel2" name="panel2" desc="带面板行单元" icon="root/panel/panel2/panel2.png"/>
+			<case id="panel3" name="panel3" desc="面板宽度占满" icon="root/panel/panel3/panel3.png"/>
+		</category>
+		<category id="grid" name="布局">
+			<case id="grid_4_2" name="grid_4_2" desc="" icon="root/grid/grid_4_2/grid_4_2.png"/>
+			<case id="grid_4_3" name="grid_4_3" desc="带边框" icon="root/grid/grid_4_3/grid_4_3.png"/>
+			<case id="grid_3_1" name="grid_3_1" desc="九宫格" icon="root/grid/grid_3_1/grid_3_1.png"/>
+			<case id="grid_3_2" name="grid_3_2" desc="九宫格" icon="root/grid/grid_3_2/grid_3_2.png"/>
+			<case id="grid_2_1" name="grid_2_1" desc="2列布局" icon="root/grid/grid_2_1/grid_2_1.png"/>
+			<case id="grid_2_2" name="grid_2_2" desc="" icon="root/grid/grid_2_2/grid_2_2.png"/>
+			<case id="box1_1" name="box1_1" desc="宽度等分1:1" icon="root/grid/box1_1/box1_1.png"/>
+			<case id="box1_2" name="box1_2" desc="宽度1:2" icon="root/grid/box1_2/box1_2.png"/>
+			<case id="box1_2_3" name="box1_2_3" desc="宽度1:2:3" icon="root/grid/box1_2_3/box1_2_3.png"/>
+			<case id="box_s_1" name="box_s_1" desc="固定一列宽度，另一列自适应宽度" icon="root/grid/box_s_1/box_s_1.png"/>
+			<case id="box3" name="box3" desc="水平方向盒子对齐分布" icon="root/grid/box3/box3.png"/>
+			<case id="vbox1_2" name="vbox1_2" desc="垂直方向高度1:2" icon="root/grid/vbox1_2/vbox1_2.png"/>
+			<case id="grid_4_1" name="grid_4_1" desc="4列布局" icon="root/grid/grid_4_1/grid_4_1.png"/>
+		</category>
+		<category id="form" name="表单">
+			<case id="label_3" name="label_3" desc="单行数据录入" icon="root/form/label_3/label_3.png"/>
+			<case id="label_star" name="label_star" desc="必填数据录入" icon="root/form/label_star/label_star.png"/>
+			<case id="form" name="form" desc="录入数据右对齐" icon="root/form/form/form.png"/>
+			<case id="form2" name="form2" desc="录入数据左对齐" icon="root/form/form2/form2.png"/>
+			<case id="login1" name="login1" desc="提交表单" icon="root/form/login1/login1.png"/>
+			<case id="order3" name="order3" desc="一般会议表单" icon="root/form/order3/order3.png"/>
+			<case id="order1" name="order1" desc="订单录入" icon="root/form/order1/order1.png"/>
+			<case id="order2" name="order2" desc="办公用品申报" icon="root/form/order2/order2.png"/>
+		</category>
+		<category id="page" name="单页">
+			<case id="page" name="page" desc="空page页" icon="root/page/page/normal.png"/>
+			<case id="page1" name="page1" desc="带数据录入页" icon="root/page/page1/page1.png"/>
+		</category>
+	</categorys>
+</template>

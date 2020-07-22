@@ -1,0 +1,6 @@
+<ul class="um-tabbar m10">
+    <li><a>待付款</a></li>
+    <li class="active"><a>待发货</a></li>
+    <li><a>待收货</a></li>
+    <li><a>待收货</a></li>
+</ul>

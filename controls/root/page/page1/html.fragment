@@ -1,0 +1,64 @@
+<div class="um-page" id="">
+	<div class="um-header" >
+		<a href="#" class="um-back">
+		返回</a>
+		<h3>导航栏</h3>
+	</div>
+	<div class="um-content">
+		<form id="">
+			<ul class="um-list">
+				<li>
+					<div class="um-list-item">
+						<div class="um-list-item-inner">
+							<div class="um-list-item-left">
+								用户名
+							</div>
+							<div class="um-list-item-right">
+								<input type="text" class="form-control" placeholder="请输入用户名" required>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="um-list-item">
+						<div class="um-list-item-inner">
+							<div class="um-list-item-left">
+								邮箱
+							</div>
+							<div class="um-list-item-right">
+								<input type="email" class="form-control" placeholder="请输入你的邮箱" required>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="um-list-item">
+						<div class="um-list-item-inner">
+							<div class="um-list-item-left">
+								密码
+							</div>
+							<div class="um-list-item-right">
+								<input type="password" class="form-control" placeholder="请输入密码" required>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="um-list-item">
+						<div class="um-list-item-inner">
+							<div class="um-list-item-left">
+								确认密码
+							</div>
+							<div class="um-list-item-right">
+								<input type="password" class="form-control" placeholder="确认密码" required>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+			<button class="um-btn">
+			提交
+			</button>
+		</form>
+	</div>
+</div>

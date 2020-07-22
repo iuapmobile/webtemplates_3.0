@@ -1,0 +1,20 @@
+<div class="um-listview-wrap" id="listview">
+					<ul class="um-list um-no-active" data-bind="foreach:data">
+						<li class="um-listview-row">
+							<a href="#" class="um-list-item um-no-icon">
+							<div class="um-list-item-media">
+								<img width=70 data-bind="attr:{src: img}" class="um-rounded">					
+							</div>
+							<div class="um-list-item-inner">
+								<div class="um-list-item-body">
+									<div data-bind="text:name" class="f16 fb"></div>
+									<div class="um-gray f14"><span data-bind="text:size" ></span>/<span data-bind="text:download"></span></div>							
+									<p data-bind="text:descri" class="mt5 f14 um-text-overflow"></p>
+								</div>
+								<div class="um-list-item-right">
+									<span class="downloadBtn">下载</span>
+								</div>
+							</div> </a>
+						</li>
+					</ul>
+				</div>

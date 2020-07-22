@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" type="text/css" href="css/iuapmobile.um.listview-2.7.0.css">
+		<style>
+			.um-list .rowline {
+				padding: 10px;
+				transition: all ease 0.3s;
+				text-align: left;
+				color: #282828;
+				-webkit-border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5JREFUeNpiPnH8zH/G////MzAxAAHTyRNn/wMEGABpvQm9g9TJ1QAAAABJRU5ErkJggg==") 2 0 stretch;
+				border-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAECAYAAABP2FU6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAB5JREFUeNpiPnH8zH/G////MzAxAAHTyRNn/wMEGABpvQm9g9TJ1QAAAABJRU5ErkJggg==") 2 0 stretch;
+				border-width: 0 0 1px 0;
+			}
+
+		</style>
+
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+
+			$(function() {
+
+			});
+		</script>
+
+		<script type="text/javascript" src="js/knockout-2.2.0.js"></script>
+		<script type="text/javascript" src="js/Frameworks/iuapmobile.frameworks.listview-2.7.0.js"></script>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-header" >
+				<h3>导航栏</h3>
+			</div>
+
+			<div class="um-content">
+
+				<div class="um-listview-wrap" id="listview">
+					<ul data-bind="foreach:data">
+						<li class="um-listview-row">
+							<div style="margin:5px;">
+								<div class="um-list" style="margin:0;">
+									<div class="rowline" style="border-top-width:0;">
+										<div class="um-media-left">
+											<img class="um-circle" height=40 width=40 data-bind="attr:{src:head}" alt="...">
+										</div>
+										<div class="um-media-body">
+											<p class="fb f16">
+												<span data-bind="text:nickname"></span>
+												<img src="img/vip.png" width=20 alt="" data-bind="visible: ifVip"/>
+											</p>
+
+											<p class="um-gray f14">
+												来自<span data-bind="text:source"></span>
+											</p>
+										</div>
+									</div>
+									<div class="rowline" style="text-align:center;padding:0;">
+										<img class="um-img-responsive" data-bind="attr:{src:pic}">
+									</div>
+									<div class="rowline" style="word-wrap: break-word;font-size:16px;">
+										<span class="ti-comment-alt um-blue"></span><span class="ml10"
+										data-bind="text:talk"></span>
+									</div>
+									<div class="rowline">
+
+										<div class="um-row tc p10 f16">
+											<div class="um-xs-3 um-red agree" data-bind="click:$parent.agree">
+												<span class="ti-thumb-up pr f24"></span><span class="pl10"
+												data-bind="text:agreeNum"></span>
+											</div>
+											<div class="um-xs-3 um-blue disagree" data-bind="click:$parent.disagree">
+												<span class="ti-thumb-down pr f24"></span><span class="pl10"
+												data-bind="text:disagreeNum"></span>
+											</div>
+											<div class="um-xs-3">
+												<span class="ti-comments f24"></span><span class="pl10"
+												data-bind="text:comments"></span>
+											</div>
+											<div class="um-xs-3">
+												<span class="ti-more-alt"></span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="um-footer">
+
+			</div>
+		</div>
+
+		<script>
+			$(function() {
+
+				//Knockout绑定
+				var RowModel = function(obj) {
+					var self = this;
+					if ( typeof obj !== "object")
+						obj = {};
+					self.head = ko.observable(obj.head || "");
+					self.nickname = ko.observable(obj.nickname || "");
+					self.ifVip = ko.observable(obj.ifVip || false);
+					self.source = ko.observable(obj.source || "");
+					self.pic = ko.observable(obj.pic || "0");
+					self.talk = ko.observable(obj.talk || "￥");
+					self.agreeNum = ko.observable(obj.agreeNum || 0);
+					self.disagreeNum = ko.observable(obj.disagreeNum || 0);
+					self.comments = ko.observable(obj.comments || 0);
+					self.hasDeclare = ko.observable("");
+				}
+				var ViewModel = function(jsonArray) {
+					var self = this;
+					var data = [];
+					jsonArray.forEach(function(item) {
+						data.push(new RowModel(item));
+					});
+					self.data = ko.observableArray(data);
+					self.agree = function(item) {
+						var agreeNum = item.agreeNum();
+						var disagreeNum = item.disagreeNum();
+						var declare = item.hasDeclare();
+						if (declare == "") {
+							item.agreeNum(agreeNum + 1);
+						} else if (declare == "disagree") {
+							item.agreeNum(agreeNum + 1);
+							item.disagreeNum(disagreeNum - 1);
+						}
+						item.hasDeclare("agree");
+					};
+					self.disagree = function(item) {
+						var agreeNum = item.agreeNum();
+						var disagreeNum = item.disagreeNum();
+						var declare = item.hasDeclare();
+						if (declare == "") {
+							item.disagreeNum(disagreeNum + 1);
+						} else if (declare == "agree") {
+							item.disagreeNum(disagreeNum + 1);
+							item.agreeNum(agreeNum - 1);
+						}
+						item.hasDeclare("disagree");
+					}
+					self.data = ko.observableArray(data);
+				};
+
+				var jsonArray = [{
+					"head" : "img/head1.jpg",
+					"nickname" : "june123",
+					"ifVip" : true,
+					"source" : "新浪",
+					"pic" : "img/adpic1.png",
+					"talk" : "收到了录音笔，很喜欢，作为播放器也是必须点赞",
+					"agreeNum" : 12,
+					"disagreeNum" : 30,
+					"comments" : 50
+				}, {
+					"head" : "img/head2.jpg",
+					"nickname" : "happyday",
+					"ifVip" : false,
+					"source" : "QQ",
+					"pic" : "img/adpic2.png",
+					"talk" : "好温馨的感觉！",
+					"agreeNum" : 20,
+					"disagreeNum" : 10,
+					"comments" : 60
+				}, {
+					"head" : "img/head1.jpg",
+					"nickname" : "甜蜜的梦",
+					"ifVip" : true,
+					"source" : "网易",
+					"pic" : "img/adpic3.png",
+					"talk" : "可爱的悟空，一直都在我们身边",
+					"agreeNum" : 20,
+					"disagreeNum" : 35,
+					"comments" : 40
+				}];
+				var viewModel = new ViewModel(jsonArray);
+				ko.applyBindings(viewModel);
+
+				//构造控件实例
+				var listview = UM.listview("#listview");
+
+				//添加控件方法
+				listview.on("pullDown", function(sender) {
+					//这是可以编写列表下拉加载逻辑，参数sender即为当前列表实例对象
+					/* var row = {
+					 "head": "img/head2.jpg",
+					 "nickname": "来自星星的你",
+					 "ifVip": false,
+					 "source": "开心网",
+					 "pic": "img/adpic4.png",
+					 "talk": "球拍刚拿到手，比想象的好，物美价廉，五星级推荐！！！",
+					 "agreeNum": 60,
+					 "disagreeNum": 55,
+					 "comments": 40
+					 };
+					 viewModel.data.unshift(new RowModel(row)); */
+					sender.refresh();
+				});
+				listview.on("pullUp", function(sender) {
+					//这是可以编写列表上拉刷新逻辑，参数sender即为当前列表实例对象
+					/* var row = {
+					 "head": "img/head2.jpg",
+					 "nickname": "北极星的眼泪",
+					 "ifVip": true,
+					 "source": "网易",
+					 "pic": "img/adpic4.png",
+					 "talk": "球拍刚拿到手，比想象的好，物美价廉，五星级推荐！！！",
+					 "agreeNum": 60,
+					 "disagreeNum": 55,
+					 "comments": 40
+					 };
+					 viewModel.data.push(new RowModel(row)); */
+					sender.refresh();
+				});
+				listview.on("itemClick", function(sender, args) {
+					//这里可以处理行点击事件，参数sender即为当前列表实例对象，args对象有2个属性，即rowIndex(行索引)和$target(目标行的jquery对象)
+					//alert("您点击了列表第"+ (args.rowIndex+1) + "行！");
+				});
+			});
+
+		</script>
+	</body>
+</html>

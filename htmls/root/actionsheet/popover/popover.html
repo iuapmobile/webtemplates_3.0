@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">
+		<link rel="stylesheet" href="css/popover.css">
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script src="js/popover.js" ></script>
+		<script>
+			$(function() {
+				$(".um-header-right").popover({
+					content : document.getElementById("temp").innerHTML,
+					width : 140,
+					animation : "pop",
+					delay : {
+						show : 100,
+						hide : 100
+					}
+				});
+			})
+		</script>
+		<style>
+			.um-popover .btn {
+				font-size: 14px;
+			}
+			.um-popover .btn img {
+				margin-right: 8px;
+				width: 20px;
+				height: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-header">
+				<a href="#" class="um-header-left"><img src="img/ldh.png" class="um-circle" width="30" alt=""></a>
+				<h3>&nbsp;</h3>
+				<div class="um-css3-center w150">
+					<ul class="um-tabbar m10">
+						<li>
+							<a>消息</a>
+						</li>
+						<li class="active">
+							<a>电话</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="um-header-right ti-menu mr5" data-placement="bottom-left"></a>
+			</div>
+			<div class="um-content">
+				<div class="um-input-search">
+					<input type="search" class="form-control" placeholder="搜索">
+					<span class="um-input-cancle">取消</span>
+				</div>
+				<div class="none" id="temp">
+					<ul class="um-list um-list-corner">
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_options_qr.png" alt="">扫一扫</a>
+						</li>
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_options_addmember.png" alt="">加好友</a>
+						</li>
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_options_multichat.png" alt="">创建讨论组</a>
+						</li>
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_options_transferfiles.png" alt="">发送到电脑</a>
+						</li>
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_facetoface_qr.png" alt="">面对面快传</a>
+						</li>
+						<li>
+							<a href="" class="btn um-no-icon"><img src="img/conversation_options_charge_icon.png" alt="">收钱</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="um-footer">
+				<div class="um-footerbar">
+					<a href="#" class="um-footerbar-item">
+						<img width="43" height="43" src="img/skin_tab_icon_conversation_normal.png" alt="">
+					</a>
+					<a href="#" class="um-footerbar-item">
+						<img width="43" height="43" src="img/skin_tab_icon_contact_selected.png" alt="">
+					</a>
+					<a href="#" class="um-footerbar-item">
+						<img width="43" height="43" src="img/skin_tab_icon_plugin_normal.png" alt="">
+					</a>
+					<a href="#" class="um-footerbar-item">
+						<img width="43" height="43" src="img/skin_tab_icon_call_normal.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

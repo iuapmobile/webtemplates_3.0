@@ -1,0 +1,64 @@
+<div class="um-list">
+	<div class="um-list-item">
+		<div class="um-list-item-media">
+			<img src="img/form.png" width=24 class="um-round" alt="">
+		</div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				飞行模式
+			</div>
+			<div class="um-list-item-right">
+				<label class="um-switch1">
+					<input type="checkbox" value="on" checked="checked">
+					<div class="um-track">
+						<div class="um-handle">
+						</div>
+					</div>
+				</label>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="um-list-item">
+		<div class="um-list-item-media">
+			<img src="img/select.png" width=24 class="um-round" alt="">
+		</div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				无线局域网
+			</div>
+			<div class="um-list-item-right">
+				<span class="um-gray mr15">用友</span>
+			</div>
+		</div>
+	</a>
+	
+</div>
+<div class="um-list">
+	<a href="#p2"  class="um-list-item">
+		<div class="um-list-item-media um-icon-ios um-icon-ios-general"></div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				通用
+			</div>
+		</div>
+	</a>
+	<a href="#p2"  class="um-list-item">
+		<div class="um-list-item-media um-icon-ios um-icon-ios-mails"></div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				邮件、通讯录、日历
+			</div>
+			<div class="um-list-item-right">
+				<span class="um-badge um-btn-info mr10">4</span>
+			</div>
+		</div>
+	</a>
+	<a href="#p2" class="um-list-item">
+		<div class="um-list-item-media um-icon-ios um-icon-ios-phone"></div>
+		<div class="um-list-item-inner">
+			<div class="um-list-item-body">
+				电话
+			</div>
+		</div>
+	</a>
+</div>

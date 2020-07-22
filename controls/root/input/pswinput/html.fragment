@@ -1,0 +1,4 @@
+<div class="um-input-group">
+	<span class="btn ti-lock"></span>
+	<input type="password" class="form-control" placeholder="密码">
+</div>

@@ -1,0 +1,14 @@
+<div class="um-row">
+	<div class="um-xs-6 um-bgc-white p10 um-border-right">
+		<img class="w" src="img/mac1.jpg" alt="">
+		<p class="f12">现货Apple/苹果 MacBook Air MJVE2CH/A 13.3/128GB笔记本电脑</p>
+		<p class="um-red f12">￥ 5100</p>
+		<div class="f12 um-gray um-box-justify"><div>月销量2000笔</div><div>免运费</div><div>北京</div></div>
+	</div>
+	<div class="um-xs-6 um-bgc-white p10">
+		<img class="w" src="img/mac1.jpg" alt="">
+		<p class="f12">现货Apple/苹果 MacBook Air MJVE2CH/A 13.3/128GB笔记本电脑</p>
+		<p class="um-red f12">￥ 5100</p>
+		<div class="f12 um-gray um-box-justify"><div>月销量2000笔</div><div>免运费</div><div>北京</div></div>
+	</div>
+</div>

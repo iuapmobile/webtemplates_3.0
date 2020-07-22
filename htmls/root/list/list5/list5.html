@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/iuapmobile.um-2.7.0.css">
+		<link rel="stylesheet" href="css/font-icons.css">	
+		<script src="js/Frameworks/iuapmobile.frameworks.core-2.7.0.js" ></script>	
+		<script src="js/jquery-2.1.4.min.js" ></script>
+		<script src="js/Frameworks/iuapmobile.frameworks.ui-2.7.0.js" ></script>
+		<script>
+		<script>
+			$isWeb = true
+		</script>
+		<script>
+			function $pageReady() {
+				alert("webview ready");
+			}
+
+		$(function(){
+			$("#b").find(".um-back").on("click",function(){
+				var x = $("#xinbie").find("input:checked").val();
+				$("#index").find("a[href='#b']").find(".um-red")[0].innerHTML = x;
+			})
+			$("#c").find(".um-back").on("click",function(){
+				var x = $("#aihao").find("input:checkbox"),
+				    arr = [];
+				$.each(x,function(){
+					if($(this).is(":checked")){
+						arr.push($(this).val())
+					}
+				})
+				$("#index").find("a[href='#c']").find(".um-red")[0].innerHTML = arr.toString();
+			})
+		})
+		</script>
+	</head>
+	<body>
+		<div class="um-page" id="index">
+			<div class="um-header">
+				<a href="#" class="um-back"></a>
+				<h3>用户登录</h3>
+			</div>
+			<div class="um-content">
+				<ul class="um-list">
+					<li class="um-list-item">
+						<a href="#b" class="btn">
+							 <div class="um-box-justify">
+							 	<div>性别</div><div class="um-red mr15">男生</div>
+							 </div>
+						</a>
+					</li>
+					<li class="um-list-item">
+						<a href="#c" class="btn um-box-justify">
+							<div class="um-box-justify">
+							 	<div>爱好</div><div class="um-red mr15">篮球</div>
+							 </div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="um-page" id="b">
+			<div class="um-header" >
+				<a href="#"  class="um-back">返回</a>
+				<h3>导航栏</h3>
+			</div>
+
+			<div class="um-content">
+				<div class="um-check-group" id="xinbie">
+					<label class="um-check-group-item">
+						<input name="um-radio"  type="radio" value="男生">
+						<span class="um-black">男生 </span>
+						<span class="um-icon-check um-css3-vc"></span>
+					</label>
+					
+					<label class="um-check-group-item">
+						<input name="um-radio" type="radio" value="女生">
+						<span class="um-black">女生</span> 
+						<span class="um-icon-check um-css3-vc"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="um-page" id="c">
+			<div class="um-header" >
+				<a href="#"  class="um-back">返回</a>
+				<h3>导航栏</h3>
+			</div>
+
+			<div class="um-content">
+				<div class="um-check-group um-check-group-left" id="aihao">
+					<label class="um-check-group-item">
+						<input name="um-checkbox" type="checkbox" value="篮球" >
+						<span class="um-black">篮球</span> 
+						<span class="um-icon-checkbox um-css3-vc"></span>
+					</label>
+					<label class="um-check-group-item">
+						<input name="um-checkbox" type="checkbox" value="羽毛球">
+						<span class="um-black">羽毛球</span> 
+						<span class="um-icon-checkbox um-css3-vc"></span>
+					</label>
+					<label class="um-check-group-item">
+						<input name="um-checkbox" type="checkbox" value="乒乓球">
+						<span class="um-black">乒乓球</span> 
+						<span class="um-icon-checkbox um-css3-vc"></span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,4 @@
+ <!-- 该画廊需要在um-content上加上um-content-fill和um-box样式类 -->
+ <div id="iSlider-wrapper" class="iSlider-wrapper"></div>
+<div id="iSlider-arrow"></div>		
+

@@ -1,0 +1,8 @@
+<label class="um-label um-box-justify">
+	<div>
+		<span class="um-red f20 um-box-vc pa" style="margin-left: -10px;">*</span>部门
+	</div>
+	<div>
+		<input type="text" class="form-control tr" placeholder="请输入部门名称">
+	</div>
+</label>

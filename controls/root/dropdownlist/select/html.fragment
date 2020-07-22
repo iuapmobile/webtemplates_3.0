@@ -1,0 +1,5 @@
+<select class="form-control">
+	<option>Option1</option>
+	<option>Option2</option>
+	<option>Option3</option>
+</select>

@@ -1,0 +1,28 @@
+<ul class="um-list">
+    <li>
+        <a href="#" class="btn">
+            <div class="um-media-left">
+                <img class="um-rounded" height=40 width=40 src="img/dress_sale.jpg" alt="...">
+            </div>
+            <div class="um-media-body">
+                <h4 class="um-media-heading">服装</h4>
+                <p>
+                    女装/男装
+                </p>
+            </div>
+        </a>
+    </li>
+    <li>
+        <a href="#" class="btn">
+            <div class="um-media-left">
+                <img class="um-rounded" height=40 width=40 src="img/iphone_sale.jpg" alt="...">
+            </div>
+            <div class="um-media-body">
+                <h4 class="um-media-heading">手机</h4>
+                <p>
+                    手机通讯/运营商/手机配件
+                </p>
+            </div>
+        </a>
+    </li>
+</ul>

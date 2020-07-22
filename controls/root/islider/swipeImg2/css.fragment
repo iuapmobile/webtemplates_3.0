@@ -1,0 +1,6 @@
+<link rel="stylesheet" type="text/css" href="css/islider.css">
+<style>
+	.iSlider-wrapper {
+		height: 150px;
+	}
+</style>

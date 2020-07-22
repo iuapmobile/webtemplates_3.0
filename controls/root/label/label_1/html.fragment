@@ -1,0 +1,6 @@
+<div class="um-label um-box-justify">
+	<div>审核状态</div>
+	<div>
+		<span class="um-green">已通过</span><i class="ti-angle-right"></i>
+	</div>
+</div>
